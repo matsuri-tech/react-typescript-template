@@ -100,6 +100,7 @@
         "lint:ts": "eslint ./src/**/*.ts ./src/**/*.tsx  --cache",
         "lint:js": "eslint ./*.js --cache",
         "lint:json": "prettier '*.json'",
+        "lint:ci": "circleci config validate",
         "lint:style": "stylelint './src/**/*.tsx' --syntax css-in-js",
         "lint:fix:ts": "yarn lint:ts --fix",
         "lint:fix:js": "yarn lint:js --fix",
@@ -116,6 +117,10 @@
         }
     },
     "lint-staged": {
+        "./.circleci/config.yml": [
+            "yarn lint:ci",
+            "git add"
+        ],
         "*.{js,jsx}": [
             "yarn lint:fix:js",
             "git add"

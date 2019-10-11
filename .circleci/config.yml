@@ -2,7 +2,7 @@ workflows:
   version: 2
   node-multi-build:
     jobs:
-      - test:
+      - test
 version: 2
 jobs:
     test:
@@ -30,7 +30,3 @@ jobs:
                   key: v{{ .Environment.CIRCLE_CACHE_VERSION }}-yarn-lock-{{ .Branch }}-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}
                   paths:
                       - ~/.cache/yarn
-    test:
-        <<: *node-base
-        docker:
-            - image: node:11
