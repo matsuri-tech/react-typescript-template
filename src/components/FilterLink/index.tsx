@@ -1,6 +1,5 @@
-import { Dispatch, State } from "@/"
 import { Link } from "@/components/Link"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch, useSelector } from "@/"
 import { visibilityFilters } from "@/redux/constants/visibilityFilters"
 import React, { useCallback } from "react"
 
@@ -10,15 +9,17 @@ export interface FilterLinkProps {
 }
 
 export const FilterLink: React.FC<FilterLinkProps> = ({ children, filter }) => {
-    const active = useSelector<State, boolean>(
-        state => filter === state.visibilityFilter
+    const active = useSelector<boolean>(
+        useCallback(state => filter === state.visibilityFilter, [filter])
     )
-    const dispatch = useDispatch<Dispatch>()
+    const dispatch = useDispatch()
 
     const handleClick = useCallback(() => {
         dispatch({
             type: "SET_VISIBILITY_FILTER",
-            payload: filter
+            payload: {
+                filter
+            }
         })
     }, [dispatch, filter])
 

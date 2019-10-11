@@ -78,12 +78,18 @@
         "ress": "2.0.1",
         "rimraf": "3.0.0",
         "source-map-loader": "0.2.4",
+        "stylelint": "^11.0.0",
+        "stylelint-config-recess-order": "^2.0.3",
+        "stylelint-config-recommended": "^3.0.0",
+        "stylelint-config-styled-components": "^0.1.1",
         "ts-jest": "24.1.0",
         "typescript": "3.6.4",
         "webpack": "4.41.1",
         "webpack-cli": "3.3.9",
         "webpack-dev-server": "3.8.2",
-        "webpack-hot-middleware": "2.25.0"
+        "webpack-hot-middleware": "2.25.0",
+        "@commitlint/cli": "^8.2.0",
+        "@commitlint/config-conventional": "^8.2.0"
     },
     "scripts": {
         "dev": "webpack-dev-server --open --colors --hot --mode development",
@@ -94,35 +100,34 @@
         "lint:ts": "eslint ./src/**/*.ts ./src/**/*.tsx  --cache",
         "lint:js": "eslint ./*.js --cache",
         "lint:json": "prettier '*.json'",
+        "lint:style": "stylelint './src/**/*.tsx' --syntax css-in-js",
         "lint:fix:ts": "yarn lint:ts --fix",
         "lint:fix:js": "yarn lint:js --fix",
         "lint:fix:json": "yarn lint:json --write",
+        "lint:fix:style": "yarn lint:style --fix",
         "lint": "run-p -l -n -c --aggregate-output lint:*",
         "lint:fix": "run-p -l -n -c --aggregate-output lint:fix:*",
         "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
     },
     "husky": {
         "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
             "pre-commit": "lint-staged"
         }
     },
     "lint-staged": {
-        "linters": {
-            "*.{js,jsx}": [
-                "yarn lint:fix:js",
-                "git add"
-            ],
-            "*.{ts,tsx}": [
-                "yarn lint:fix:ts",
-                "git add"
-            ],
-            "*.{json}": [
-                "yarn lint:fix:json",
-                "git add"
-            ]
-        },
-        "ignore": [
-            "dist/**/*"
+        "*.{js,jsx}": [
+            "yarn lint:fix:js",
+            "git add"
+        ],
+        "*.{ts,tsx}": [
+            "yarn lint:fix:ts",
+            "yarn lint:style",
+            "git add"
+        ],
+        "*.{json}": [
+            "yarn lint:fix:json",
+            "git add"
         ]
     },
     "dependencies": {

@@ -1,18 +1,16 @@
-let nextTodoId = 0
-
-export const addTodo = (payload: string) =>
+export const addTodo = (text: string, id: number) =>
     ({
         type: "ADD_TODO",
-        payload,
-        meta: {
-            id: nextTodoId++
+        payload: {
+            text,
+            id
         }
     } as const)
 
-export const toggleTodo = (payload: number) =>
+export const toggleTodo = (id: number) =>
     ({
         type: "TOGGLE_TODO",
-        meta: {
-            id: payload
+        payload: {
+            id
         }
     } as const)

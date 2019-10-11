@@ -1,5 +1,4 @@
 import * as actions from "../actions/visibilityFilter"
-import { ActionType } from "@/typings/redux"
 import { Reducer } from "redux"
 import { visibilityFilters } from "../constants/visibilityFilters"
 
@@ -15,7 +14,7 @@ export const visibilityFilter: Reducer<State, Action> = (
 ) => {
     switch (action.type) {
         case "SET_VISIBILITY_FILTER":
-            return action.payload
+            return action.payload.filter
         default:
             return state
     }

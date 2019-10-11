@@ -1,5 +1,6 @@
 import { Todo } from "@/components/Todo"
 import React, { useCallback } from "react"
+import styled from "styled-components"
 
 interface TodoListProps {
     todos: {
@@ -10,6 +11,18 @@ interface TodoListProps {
     toggleTodo: (id: number) => void
 }
 
+const Root = styled.ul`
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+    li {
+        margin: 0.25em 0.5em 0.25em 0px;
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+`
+
 export const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo }) => {
     const handleClick = useCallback(
         (id: number) => () => {
@@ -18,7 +31,7 @@ export const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo }) => {
         [toggleTodo]
     )
     return (
-        <ul>
+        <Root>
             {todos.map(todo => (
                 <Todo
                     key={todo.id}
@@ -28,6 +41,6 @@ export const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo }) => {
                     {todo.text}
                 </Todo>
             ))}
-        </ul>
+        </Root>
     )
 }

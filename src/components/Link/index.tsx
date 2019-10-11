@@ -1,5 +1,5 @@
-import { StyleFactory } from "@/typings/css"
 import React from "react"
+import styled from "styled-components"
 
 export interface LinkProps {
     active: boolean
@@ -7,16 +7,24 @@ export interface LinkProps {
     onClick: () => void
 }
 
-const sx: StyleFactory = {
-    root: {
-        marginLeft: "4px",
-        display: "flex",
-        alignContent: "center"
+const Root = styled.button`
+    margin-left: 4px;
+    padding: 0.25em 0.5em;
+    color: coral;
+    border: 1px solid coral;
+    outline: none;
+    text-align: center;
+    text-transform: uppercase;
+    &:disabled {
+        color: rgba(0, 0, 0, 0.247);
+        border-color: rgba(0, 0, 0, 0.247);
     }
-}
+`
 
-export const Link: React.FC<LinkProps> = ({ active, children, onClick }) => (
-    <button onClick={onClick} disabled={active} style={sx.root}>
-        {children}
-    </button>
-)
+export const Link: React.FC<LinkProps> = ({ active, children, onClick }) => {
+    return (
+        <Root onClick={onClick} disabled={active}>
+            {children}
+        </Root>
+    )
+}

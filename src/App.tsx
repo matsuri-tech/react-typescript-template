@@ -6,12 +6,30 @@ import { Link, Route, BrowserRouter as Router, Switch } from "react-router-dom"
 import { Users } from "./pages/Users"
 import { VisibleTodoList } from "./components/VisibleTodoList"
 import React from "react"
+import styled from "styled-components"
+
+const Main = styled.main`
+    padding: 0 8vw;
+`
+
+const PageMenu = styled.nav`
+    ul {
+        display: flex;
+        align-items: center;
+        height: 3em;
+        justify-content: flex-end;
+        list-style: none;
+        li {
+            margin-right: 1em;
+        }
+    }
+`
 
 export const App = () => {
     return (
         <Router>
-            <div>
-                <nav>
+            <Main>
+                <PageMenu>
                     <ul>
                         <li>
                             <Link to={Home.path}>Home</Link>
@@ -23,8 +41,7 @@ export const App = () => {
                             <Link to={Users.path}>Users</Link>
                         </li>
                     </ul>
-                </nav>
-
+                </PageMenu>
                 <Switch>
                     <Route path={About.path}>
                         <About />
@@ -39,7 +56,7 @@ export const App = () => {
                 <AddTodo />
                 <VisibleTodoList />
                 <Footer />
-            </div>
+            </Main>
         </Router>
     )
 }

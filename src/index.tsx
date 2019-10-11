@@ -1,17 +1,29 @@
+import "./style.css"
 import "ress"
 import * as React from "react"
 import * as ReactDOM from "react-dom"
 import * as actions from "@/redux/actions"
-import { ActionType, StateType } from "@/typings/redux"
 import { App } from "./App"
-import { Provider } from "react-redux"
-import { Dispatch as TDispatch, createStore } from "redux"
+import { Dispatch, createStore } from "redux"
+import {
+    Provider,
+    useDispatch as _useDispatch,
+    useSelector as _useSelector
+} from "react-redux"
 import rootReducer from "@/redux/reducers"
 
-export type Dispatch = TDispatch<ActionType<typeof actions>>
-export type State = Exclude<StateType<typeof rootReducer>, undefined>
-
 const store = createStore(rootReducer)
+
+export const useDispatch = _useDispatch as () => Dispatch<
+    ActionType<typeof actions>
+>
+
+export type Store = StateType<typeof rootReducer>
+
+export const useSelector = _useSelector as <TSelected>(
+    selector: (state: Store) => TSelected,
+    equalityFn?: (left: TSelected, right: TSelected) => boolean
+) => TSelected
 
 ReactDOM.render(
     <Provider store={store}>
