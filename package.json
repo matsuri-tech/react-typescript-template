@@ -20,8 +20,8 @@
         "node_modules"
     ],
     "peerDependencies": {
-        "react": "^16.8.6",
-        "react-dom": "^16.8.6"
+        "react": "^16.10.2",
+        "react-dom": "^16.10.2"
     },
     "devDependencies": {
         "@babel/core": "7.6.4",
