@@ -1,0 +1,9 @@
+node_modules
+.rpt2_cache
+.eslintcache
+
+# parcel
+.cache
+dist
+
+package-lock.json

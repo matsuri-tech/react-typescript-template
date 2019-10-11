@@ -1,0 +1,132 @@
+{
+    "name": "matsuri-react-app-template",
+    "title": "Edit package.json",
+    "description": "Edit package.json",
+    "homepage": "https://edit-package.json",
+    "version": "1.0.1",
+    "repository": "https://git-matsuri.xyz/developer/matsuri-react-app-template.git",
+    "license": "GPL-3.0",
+    "main": "dist/index.cjs.js",
+    "jsnext:main": "dist/index.esm.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/index.d.ts",
+    "author": "hrdtbs",
+    "files": [
+        "dist",
+        "package.json"
+    ],
+    "eslintIgnore": [
+        "dist",
+        "node_modules"
+    ],
+    "peerDependencies": {
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6"
+    },
+    "devDependencies": {
+        "@babel/core": "7.6.3",
+        "@babel/plugin-external-helpers": "^7.2.0",
+        "@babel/plugin-proposal-class-properties": "^7.5.5",
+        "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+        "@babel/plugin-transform-runtime": "^7.6.2",
+        "@babel/preset-env": "^7.6.3",
+        "@babel/preset-react": "^7.6.3",
+        "@babel/preset-typescript": "^7.6.0",
+        "@types/enzyme": "^3.10.3",
+        "@types/enzyme-adapter-react-16": "^1.0.5",
+        "@types/jest": "^24.0.18",
+        "@types/react": "^16.9.5",
+        "@types/react-dom": "^16.9.1",
+        "@types/react-redux": "^7.1.4",
+        "@types/react-router-dom": "^5.1.0",
+        "@types/styled-components": "^4.1.19",
+        "@typescript-eslint/eslint-plugin": "2.3.3",
+        "@typescript-eslint/parser": "2.3.3",
+        "babel-loader": "^8.0.6",
+        "babel-plugin-styled-components": "^1.10.6",
+        "clean-webpack-plugin": "^3.0.0",
+        "conventional-changelog-cli": "^2.0.25",
+        "copy-webpack-plugin": "^5.0.4",
+        "css-loader": "^3.2.0",
+        "csstype": "^2.6.7",
+        "dotenv": "^8.1.0",
+        "dotenv-webpack": "^1.7.0",
+        "enzyme": "^3.10.0",
+        "enzyme-adapter-react-16": "^1.15.0",
+        "enzyme-to-json": "^3.4.2",
+        "eslint": "6.5.1",
+        "eslint-config-prettier": "6.4.0",
+        "eslint-plugin-prettier": "3.1.1",
+        "eslint-plugin-react": "7.16.0",
+        "eslint-plugin-react-hooks": "2.1.2",
+        "eslint-plugin-sort-imports-es6-autofix": "0.5.0",
+        "file-loader": "^4.2.0",
+        "html-webpack-plugin": "^3.2.0",
+        "husky": "3.0.8",
+        "jest": "^24.9.0",
+        "lint-staged": "9.4.2",
+        "mini-css-extract-plugin": "^0.8.0",
+        "npm-run-all": "4.1.5",
+        "parcel-bundler": "1.12.4",
+        "prettier": "1.18.2",
+        "react": "^16.10.2",
+        "react-dom": "^16.10.2",
+        "react-redux": "^7.1.1",
+        "react-router-dom": "^5.1.2",
+        "redux": "^4.0.4",
+        "ress": "^2.0.1",
+        "rimraf": "3.0.0",
+        "source-map-loader": "^0.2.4",
+        "ts-jest": "^24.1.0",
+        "typescript": "^3.6.4",
+        "webpack": "^4.41.0",
+        "webpack-cli": "^3.3.9",
+        "webpack-dev-server": "^3.8.2",
+        "webpack-hot-middleware": "^2.25.0"
+    },
+    "scripts": {
+        "dev": "webpack-dev-server --open --colors --hot --mode development",
+        "build": "webpack --mode production",
+        "start": "npx serve dist",
+        "test": "jest",
+        "update": "yarn upgrade-interactive --latest",
+        "lint:ts": "eslint ./src/**/*.ts ./src/**/*.tsx  --cache",
+        "lint:js": "eslint ./*.js --cache",
+        "lint:json": "prettier '*.json'",
+        "lint:fix:ts": "yarn lint:ts --fix",
+        "lint:fix:js": "yarn lint:js --fix",
+        "lint:fix:json": "yarn lint:json --write",
+        "lint": "run-p -l -n -c --aggregate-output lint:*",
+        "lint:fix": "run-p -l -n -c --aggregate-output lint:fix:*",
+        "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "linters": {
+            "*.{js,jsx}": [
+                "yarn lint:fix:js",
+                "git add"
+            ],
+            "*.{ts,tsx}": [
+                "yarn lint:fix:ts",
+                "git add"
+            ],
+            "*.{json}": [
+                "yarn lint:fix:json",
+                "git add"
+            ]
+        },
+        "ignore": [
+            "dist/**/*"
+        ]
+    },
+    "dependencies": {
+        "core-js": "3",
+        "styled-components": "^4.4.0"
+    }
+}
