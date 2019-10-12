@@ -1,4 +1,4 @@
-import { Store, useDispatch, useSelector } from "@/"
+import { Store, useDispatch, useSelector } from "react-redux"
 import { TodoList } from "@/components/TodoList"
 import { visibilityFilters } from "@/redux/constants"
 import React, { useCallback } from "react"

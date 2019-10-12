@@ -1,5 +1,5 @@
 import { Link } from "@/components/Link"
-import { useDispatch, useSelector } from "@/"
+import { useDispatch, useSelector } from "react-redux"
 import { visibilityFilters } from "@/redux/constants/visibilityFilters"
 import React, { useCallback } from "react"
 

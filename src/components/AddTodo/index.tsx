@@ -1,4 +1,4 @@
-import { useDispatch } from "@/"
+import { useDispatch } from "react-redux"
 import React, { useCallback, useRef } from "react"
 import styled from "styled-components"
 
