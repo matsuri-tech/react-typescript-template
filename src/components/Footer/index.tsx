@@ -1,6 +1,5 @@
 import { FilterLink } from "@/components/FilterLink"
 import { visibilityFilters } from "@/redux/constants"
-import React from "react"
 import styled from "styled-components"
 
 const Root = styled.footer`

@@ -92,7 +92,7 @@
         "@commitlint/config-conventional": "^8.2.0"
     },
     "scripts": {
-        "dev": "webpack-dev-server --open --colors --hot --mode development",
+        "dev": "webpack-dev-server --open --colors --hot --mode development --history-api-fallback",
         "build": "webpack --mode production",
         "start": "npx serve dist",
         "test": "jest",

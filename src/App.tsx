@@ -5,7 +5,6 @@ import { Home } from "./pages/Home"
 import { Link, Route, BrowserRouter as Router, Switch } from "react-router-dom"
 import { Users } from "./pages/Users"
 import { VisibleTodoList } from "./components/VisibleTodoList"
-import React from "react"
 import styled from "styled-components"
 
 const Main = styled.main`
@@ -24,7 +23,6 @@ const PageMenu = styled.nav`
         }
     }
 `
-
 export const App = () => {
     return (
         <Router>

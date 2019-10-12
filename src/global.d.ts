@@ -11,6 +11,7 @@ declare module "*.svg"
 declare namespace NodeJS {
     interface ProcessEnv {
         readonly NODE_ENV: "development" | "production" | "test"
+        [key: string]: string
         /**
          * process.envを利用するときは以下に追記する
          */

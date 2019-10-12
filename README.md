@@ -1,20 +1,50 @@
-- [HTML](#html)
-  - [OGPテンプレート](#ogp%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88)
-  - [Faviconテンプレート](#favicon%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88)
-  - [Googleフォントの最適化](#google%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88%E3%81%AE%E6%9C%80%E9%81%A9%E5%8C%96)
-- [Image](#image)
-- [CSS](#css)
-  - [styled-components](#styled-components)
-  - [reset.css](#resetcss)
-- [React](#react)
-  - [Alias](#alias)
-     - [Aliasを追加する場合](#alias%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88)
-  - [Babel](#babel)
-     - [ブラウザのカバー範囲](#%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%AE%E3%82%AB%E3%83%90%E3%83%BC%E7%AF%84%E5%9B%B2)
-     - [対応している構文](#%E5%AF%BE%E5%BF%9C%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E6%A7%8B%E6%96%87)
-- [WIP: Webpackの設定](#wip-webpack%E3%81%AE%E8%A8%AD%E5%AE%9A)
-- [WIP: テストツール（Jest + Enzyme）](#wip-%E3%83%86%E3%82%B9%E3%83%88%E3%83%84%E3%83%BC%E3%83%ABjest--enzyme)
-- [WIP: フォーマッター](#wip-%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%82%BF%E3%83%BC)
+## React
+
+1. React及びReactDOMのglobal import
+
+```tsx
+// import * as React from "react" // 不要
+const App =  () => {
+  <div>Hello, World</div>
+}
+
+// ReactDOMのimportも不要
+ReactDOM.render(<App />,document.getElementById("root"))
+```
+
+2. Reduxの拡張
+
+`useDispatch`及び`useSelector`の型定義を拡張しています。
+
+`useDispatch<Dispatch>`はジェネリクスを指定しない場合、`/redux/actions`以下から型が推論されます。
+
+`useSelector<Selected, State>`の`State`には、
+自動で`/redux/reducers`の`rootReducer`から得られる`Store`の型が入ります。
+
+また`useSelector`で用いられる`Store`の型は`react-redux`からインポートが可能です。
+
+> 通常の`useSelector`と`Selected`と`State`の順番が逆であることに注意してください。
+
+> また`useDispatch`と`useSelector`は`Store`が１つであることを前提としています。
+> これは複数の`Store`が存在する場合、`Store`の型は一意に決まらないためです。
+
+さらにreduxの型ヘルパーとして`StateType<Reducer>`と`ActionType<ActionCreators>`を用意しています。
+
+3. ProcessEnvの強い型定義
+
+ProcessEnvに値を追加し補完を効かせたい場合は`src/global.d.ts`を直接編集してください。
+
+```tsx
+declare namespace NodeJS {
+    interface ProcessEnv {
+        readonly NODE_ENV: "development" | "production" | "test"
+        [key: string]: string
+        /**
+         * process.envを利用するときは以下に追記する
+         */
+    }
+}
+```
 
 ## HTML
 
@@ -22,9 +52,13 @@
 
 ### OGPテンプレート
 
-- OGP
-- Twitter
-- Facebook
+一般的なOGP、Twitter OGP、Facebook OGPに対応しています。
+
+`title`、`description`、`homepage`はpackage.jsonから設定できます。
+
+ただしOGP画像は`public/index.html`を直接編集してください。
+
+> OGP画像は絶対パスで指定する必要があります。
 
 ### Faviconテンプレート
 
@@ -39,7 +73,9 @@
 
 Noto Sana JPに最適化されています
 
-別のGoogleフォントを使いたい場合は、書き換えが必要
+別のGoogleフォントを使いたい場合は、`public/index.html`を見て良しなに書き換えてください。
+
+Googleフォントを使用しない場合は無駄なコストになるので、コメントアウトするか消してください。
 
 ## Image
 
@@ -61,19 +97,30 @@ export const Logo = () => {
 }
 ```
 
-> `typings/Image.d.ts`に記載されていない拡張子をimportをした場合、エラーが出ますが、`typings/Image.d.ts`へ追加すればほぼ問題ないはずです。それでもエラーが出る場合は、webpackの`url-loader`の部分を確認してください。
+画像の`import`がエラーを返す場合は`src/global.d.ts`の次の箇所
+
+```typescript
+/**
+ * Images
+ */
+declare module "*.png"
+declare module "*.jpg"
+declare module "*.svg"
+```
+
+を参考に足りない拡張子を追記してください。
 
 ## CSS
 
-このテンプレートでは、なるべくCSS in JSを使用することを想定しています。CSSやSCSS、PostCSSを主体的に使いたい場合はwebpackの書き換えを行う必要があるかもしれません。
+このテンプレートでは、なるべくCSS in JSを使用することを想定しています。CSSやSCSS、PostCSSを主体的に使いたい場合はwebpackの書き換えを行う必要があるかもしれません。CSSファイルの`import`自体は可能です。
 
 ### styled-components
 
-問題なく扱えるはずです。
+stylelint、babelをstyled-components用に調整しています。元々`dependencies`に含まれています。
 
 ### reset.css
 
-ress及びmodern-reset.cssを参考にmatsuri-ui用にカスタマイズしました。
+ressを入れています。
 
 ## React
 
@@ -81,13 +128,13 @@ Typescriptを利用することを想定しています
 
 ### Alias
 
-`@`で`src/`にアクセス出来ます
+`@/`で`src/`にアクセス出来ます
 
 #### Aliasを追加する場合
 
 aliasを追加する場合、以下の3つの書き換えが必要です。
 
-また追加する場合はチームで必ず共有してからにしてください。
+また追加する場合は`Alias`の項目に追記してください。
 
 - [ ] webpack.config.je
 
@@ -100,11 +147,9 @@ eslintに記述されたecmaVersionの範疇を超える構文を扱えるよう
 
 #### ブラウザのカバー範囲
 
-\> 0.1% in JP, not IE < 11, not op_mini all
+[`> 0.1% in JP, not IE < 11, not op_mini all`](https://browserl.ist/?q=%3E0.1%25+in+JP%2C+not+IE+%3C+11%2C+not+op_mini+all)
 
-<https://browserl.ist/?q=%3E0.1%25+in+JP%2C+not+IE+%3C+11%2C+not+op_mini+all>
-
-#### 対応している構文
+#### 設定
 
 - グローバル変数を使用して、各ファイルに共通のコード出力を1つにまとめることによって、重複するコード出力を減らす
 
@@ -118,9 +163,9 @@ eslintに記述されたecmaVersionの範疇を超える構文を扱えるよう
 
 - async/awaitのサポート
 
-## WIP: Webpackの設定
+## Webpack
 
-- [ ] split chunks
+- [x] split chunks
 
 - [x] runtime chunk
 - [x] aggressive merging
@@ -129,11 +174,19 @@ eslintに記述されたecmaVersionの範疇を超える構文を扱えるよう
 - [x] code splitting
 - [x] dotenv 
 
-## WIP: テストツール（Jest + Enzyme）
+## テストツール（Jest + Enzyme）
 
-## WIP: フォーマッター
+- [x] config
+- [ ] サンプルの追加
 
-- editorconfig
-- prettier
-- eslint
-- eslint-typescript
+## フォーマッター
+
+- [x] editorconfig
+
+- [x] prettier
+
+## リンター
+
+- [x] commitlint
+- [x] stylelint
+- [x] Aslant

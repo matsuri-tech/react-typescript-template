@@ -8,8 +8,8 @@ declare module "react-redux" {
     function useDispatch<
         TDispatch = Dispatch<ActionType<typeof actions>>
     >(): TDispatch
-    function useSelector<TSelected>(
-        selector: (state: Store) => TSelected,
+    function useSelector<TSelected, TState = Store>(
+        selector: (state: TState) => TSelected,
         equalityFn?: (left: TSelected, right: TSelected) => boolean
     ): TSelected
 }
