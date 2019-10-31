@@ -137,6 +137,6 @@
     },
     "dependencies": {
         "core-js": "3",
-        "styled-components": "^4.4.0"
+        "styled-components": "^4.4.1"
     }
 }
