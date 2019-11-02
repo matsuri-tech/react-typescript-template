@@ -77,6 +77,19 @@ Noto Sana JPに最適化されています
 
 Googleフォントを使用しない場合は無駄なコストになるので、コメントアウトするか消してください。
 
+## Markdown
+
+markdownファイルを単なる文字列としてimportすることができます。
+
+```typescript
+import note from "./readme.md"
+import marked from "marked"
+
+export default () => (
+    <div dangerouslySetInnerHtml={marked(note)}/>
+)
+```
+
 ## Image
 
 `public/static/img/`以下の画像ファイルには次のようにアクセス出来ます。
