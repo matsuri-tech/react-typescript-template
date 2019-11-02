@@ -6,6 +6,14 @@ declare module "*.jpg"
 declare module "*.svg"
 
 /**
+ * Markdown
+ */
+declare module "*.md" {
+    const content: string
+    export default content
+}
+
+/**
  * ProcessEnv
  */
 declare namespace NodeJS {
