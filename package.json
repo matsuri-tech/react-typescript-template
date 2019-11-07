@@ -95,6 +95,7 @@
     "scripts": {
         "dev": "webpack-dev-server --open --colors --hot --mode development --history-api-fallback",
         "build": "webpack --mode production",
+        "build-dev": "webpack --mode development",
         "start": "npx serve dist",
         "test": "jest",
         "update": "yarn upgrade-interactive --latest",
