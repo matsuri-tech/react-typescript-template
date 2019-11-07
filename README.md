@@ -1,15 +1,12 @@
 ## React
 
-1. React及びReactDOMのglobal import
+1. Reactのglobal import
 
 ```tsx
 // import * as React from "react" // 不要
 const App =  () => {
   <div>Hello, World</div>
 }
-
-// ReactDOMのimportも不要
-ReactDOM.render(<App />,document.getElementById("root"))
 ```
 
 2. Reduxの拡張
