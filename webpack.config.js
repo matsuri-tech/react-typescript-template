@@ -168,6 +168,7 @@ module.exports = (_, { mode = "development" }) => {
             new webpack.HotModuleReplacementPlugin()
         ]
         config.devServer = {
+            historyApiFallback: true,
             contentBase: path.resolve(__dirname, "public"),
             stats: {
                 colors: true,
