@@ -27,5 +27,6 @@
     ],
     "css.validate": false,
     "scss.validate": false,
-    "stylelint.enable": true
+    "stylelint.enable": true,
+    "typescript.tsdk": "node_modules/typescript/lib"
 }
