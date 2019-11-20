@@ -12871,10 +12871,10 @@ resolve@1.x, resolve@^1.1.5, resolve@^1.1.6, resolve@^1.10.0, resolve@^1.11.0, r
   dependencies:
     path-parse "^1.0.6"
 
-ress@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/ress/-/ress-2.0.1.tgz#2e1824e19a9506aa09a42621ed6dc4d92b1b8dca"
-  integrity sha512-yIFO2SiMp/lWdtIVE9E5I5ZCLAcwsyUYE7g2LdDmNAIhHvw6e9tL3Ybr8Hi9nQOtQnMrnU9UTkxHxWFNL9Y/4w==
+ress@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/ress/-/ress-2.0.2.tgz#def3855b3635ac52d9073028e1c51fa4dc5686e3"
+  integrity sha512-ZSqandm4BmA5fpHBEL7OP5TJCf43Njaib/nvUSzUvNCX3cySPoJo8lIbP7dXcpr/ej9yojUnDHs4RlsoHczDFw==
 
 restore-cursor@^2.0.0:
   version "2.0.0"
