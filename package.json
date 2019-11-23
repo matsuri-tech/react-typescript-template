@@ -95,7 +95,7 @@
         "stylelint-config-recommended": "^3.0.0",
         "stylelint-config-styled-components": "^0.1.1",
         "stylelint": "^12.0.0",
-        "ts-jest": "24.1.0",
+        "ts-jest": "24.2.0",
         "typescript": "3.7.2",
         "webpack-cli": "3.3.10",
         "webpack-dev-server": "3.9.0",
