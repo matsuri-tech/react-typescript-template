@@ -2,7 +2,7 @@ import { Todo } from "@/components/Todo"
 import { useCallback } from "react"
 import styled from "styled-components"
 
-interface TodoListProps {
+export interface TodoListProps {
     todos: {
         id: number
         completed: boolean
