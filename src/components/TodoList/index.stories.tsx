@@ -11,6 +11,7 @@ export default {
 export const BasicUsage = () => {
     return (
         <TodoList
+            toggleTodo={() => {}}
             todos={[
                 {
                     id: 1,
