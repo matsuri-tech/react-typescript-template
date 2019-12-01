@@ -1560,7 +1560,7 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@storybook/addon-actions@^5.2.6":
+"@storybook/addon-actions@^5.2.7":
   version "5.2.7"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-5.2.7.tgz#51589f02971f347ff5e3c554056ffe1e7a6a41ff"
   integrity sha512-PWCJOFWhwBgy2JOuX3Do7gb5FqPBjmWtFEiaz1HNe3pWlf8jn2cUQQfdRCmLd9wWwL6BgVH6kchwu91TcYNPgA==
@@ -1580,7 +1580,7 @@
     react-inspector "^3.0.2"
     uuid "^3.3.2"
 
-"@storybook/addon-docs@^5.2.6":
+"@storybook/addon-docs@^5.2.7":
   version "5.2.7"
   resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-5.2.7.tgz#cab58fa944fe876173350346175ea516f8437306"
   integrity sha512-9flGY+5k8BYKB5Mf0A87FyqjDYhoqPNL+XDEc4bexnWMu0x50RawmXeEk2QliG81TpCmRizqDsnOnOMmXgw3uw==
@@ -1603,7 +1603,7 @@
     lodash "^4.17.15"
     prop-types "^15.7.2"
 
-"@storybook/addon-links@^5.2.6":
+"@storybook/addon-links@^5.2.7":
   version "5.2.7"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-5.2.7.tgz#be0e63ccaec8ec7e876eae6c9eda6f87764a543a"
   integrity sha512-gV51F/Y3xIfyjAyIT0ohLbxtEDoUX6b7GbGrncCcyMcyGIV975Xa91QWbQab55kSn8CWWf1Ru28An1Y26R7bGQ==
@@ -1617,7 +1617,7 @@
     prop-types "^15.7.2"
     qs "^6.6.0"
 
-"@storybook/addon-notes@^5.2.6":
+"@storybook/addon-notes@^5.2.7":
   version "5.2.7"
   resolved "https://registry.yarnpkg.com/@storybook/addon-notes/-/addon-notes-5.2.7.tgz#0ba055c83a8208f346685e51caa313dca94ed460"
   integrity sha512-v6NuGEN1qr7bgObrp2fY3GYsmDqwyT6tB1hz1+/O+HqiLGGx91fqmTJTrMhXIt0b6uPW7W+kLL4cNcDuWE3xEQ==
@@ -1636,7 +1636,7 @@
     prop-types "^15.7.2"
     util-deprecate "^1.0.2"
 
-"@storybook/addons@5.2.7", "@storybook/addons@^5.2.6":
+"@storybook/addons@5.2.7", "@storybook/addons@^5.2.7":
   version "5.2.7"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.2.7.tgz#a868ca0a209aefa8a17718b58327dd3ff37f2d76"
   integrity sha512-eWRSvs5/28KhU28iWjClfOryRN1IuycFcWEJrRtMOXyf44TTyzEC5PbH35eGh33MpWVJYM+8CUJQqNOxxDVjBw==
@@ -1835,7 +1835,7 @@
     pretty-hrtime "^1.0.3"
     regenerator-runtime "^0.12.1"
 
-"@storybook/react@^5.2.6":
+"@storybook/react@^5.2.7":
   version "5.2.7"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-5.2.7.tgz#52b0bb7bfdc07991624122e9a14142733624156c"
   integrity sha512-FZQ37Q3x6xAu5+Cmz8sZIwQtjLW2WYu8jtK/qivIsVJvS1Tb9DWkSm1yN+F+2afLevkaimQkEOuaqHp+pPW9BA==
@@ -1876,7 +1876,7 @@
     memoizerific "^1.11.3"
     qs "^6.6.0"
 
-"@storybook/source-loader@5.2.7", "@storybook/source-loader@^5.2.6":
+"@storybook/source-loader@5.2.7", "@storybook/source-loader@^5.2.7":
   version "5.2.7"
   resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-5.2.7.tgz#680e610d4682a0c427a86297d5edea42b8fb62f9"
   integrity sha512-N/nvrCFwjU3s6uXO78TZVrmMEMk1OfnXwl0OFA1Dl115KDtNFDxYPOqSewy5JF+3GnaRfMow29pYeOwJaiUb8A==
