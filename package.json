@@ -58,7 +58,7 @@
         "conventional-changelog-cli": "2.0.28",
         "copy-webpack-plugin": "5.0.5",
         "core-js": "3",
-        "css-loader": "3.2.0",
+        "css-loader": "3.2.1",
         "csstype": "2.6.7",
         "dotenv": "8.2.0",
         "dotenv-webpack": "1.7.0",
