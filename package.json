@@ -3,7 +3,7 @@
     "title": "Edit package.json",
     "description": "Edit package.json",
     "homepage": "https://edit-package.json",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "repository": "https://git-matsuri.xyz/developer/matsuri-react-app-template.git",
     "license": "GPL-3.0",
     "main": "dist/index.cjs.js",
