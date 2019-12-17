@@ -58,7 +58,7 @@
         "copy-webpack-plugin": "5.1.1",
         "core-js": "3",
         "css-loader": "3.3.2",
-        "csstype": "2.6.7",
+        "csstype": "2.6.8",
         "dotenv": "8.2.0",
         "dotenv-webpack": "1.7.0",
         "enzyme": "3.10.0",
