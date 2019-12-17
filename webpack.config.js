@@ -7,6 +7,7 @@ const AggressiveMergingPlugin = require("webpack/lib/optimize/AggressiveMergingP
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const dotenv = require("dotenv")
 const pkg = require("./package.json")
+const TerserPlugin = require("terser-webpack-plugin")
 
 module.exports = (_, { mode = "development" }) => {
     const env = dotenv.config().parsed
@@ -102,7 +103,12 @@ module.exports = (_, { mode = "development" }) => {
             },
             runtimeChunk: {
                 name: "runtime"
-            }
+            },
+            minimizer: [
+                new TerserPlugin({
+                    extractComments: true
+                })
+            ]
         },
         plugins: [
             new webpack.DefinePlugin({
