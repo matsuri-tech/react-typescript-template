@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://git-matsuri.xyz/developer/matsuri-react-app-template/compare/v1.1.1...v1.1.2) (2019-12-19)
+
+
+### Others
+
+* **deps:** update dependency css-loader to v3.4.0 ([#103](https://git-matsuri.xyz/developer/matsuri-react-app-template/issues/103)) ([defe6ba](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/defe6ba475a962f624f4dc9d9a6bd1cba028c1ba))
+* **deps:** update dependency csstype to v2.6.8 ([#99](https://git-matsuri.xyz/developer/matsuri-react-app-template/issues/99)) ([a9d2ee4](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/a9d2ee4cb11bd8f0c771d9ca09ec192851a8f850))
+* **deps:** update dependency mini-css-extract-plugin to v0.8.2 ([#104](https://git-matsuri.xyz/developer/matsuri-react-app-template/issues/104)) ([bc59108](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/bc591082dd473b72a90a3618b9ab326fcb7cfae9))
+* **deps:** update dependency webpack to v4.41.3 ([#100](https://git-matsuri.xyz/developer/matsuri-react-app-template/issues/100)) ([634451b](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/634451bf3a238d883dd20f6d63c47225ce68312c))
+* **deps:** update typescript-eslint monorepo to v2.12.0 ([#101](https://git-matsuri.xyz/developer/matsuri-react-app-template/issues/101)) ([f961faa](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/f961faa2b043129c418419e48d61d2c9b0189f00))
+* **netlify:** add support of github package registory ([#105](https://git-matsuri.xyz/developer/matsuri-react-app-template/issues/105)) ([4f0a691](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/4f0a691994cf9cfa87fde2e82904c89d98564411))
+
 ### [1.1.1](https://git-matsuri.xyz/developer/matsuri-react-app-template/compare/v1.1.0...v1.1.1) (2019-12-17)
 
 
