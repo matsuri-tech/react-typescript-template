@@ -102,6 +102,7 @@
         "webpack-hot-middleware": "2.25.0"
     },
     "scripts": {
+        "preinstall": "node ./scripts/netlify-preinstall.js",
         "dev": "webpack-dev-server --open --colors --hot --mode development --history-api-fallback",
         "build": "webpack --mode production",
         "build-dev": "webpack --mode development",
