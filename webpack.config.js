@@ -176,6 +176,7 @@ module.exports = (_, { mode = "development" }) => {
         config.devServer = {
             historyApiFallback: true,
             contentBase: path.resolve(__dirname, "public"),
+            disableHostCheck: true,
             stats: {
                 colors: true,
                 hash: false,
