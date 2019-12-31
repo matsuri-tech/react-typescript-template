@@ -11916,10 +11916,10 @@ resolve@1.x, resolve@^1.1.6, resolve@^1.10.0, resolve@^1.11.0, resolve@^1.12.0, 
   dependencies:
     path-parse "^1.0.6"
 
-ress@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/ress/-/ress-2.0.2.tgz#def3855b3635ac52d9073028e1c51fa4dc5686e3"
-  integrity sha512-ZSqandm4BmA5fpHBEL7OP5TJCf43Njaib/nvUSzUvNCX3cySPoJo8lIbP7dXcpr/ej9yojUnDHs4RlsoHczDFw==
+ress@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/ress/-/ress-2.0.3.tgz#757f68de7947a1f517d09c56fbe417ed3eeca504"
+  integrity sha512-dcQUM6cBSu+8EozLy5ew7BEWFEIsMp0pqmf2v+xBqKN3lSkIwwtLgTcNVFc9rAjflwYiKCIm2aWfX+2gW4b1qQ==
 
 restore-cursor@^2.0.0:
   version "2.0.0"
