@@ -28,6 +28,10 @@ module.exports = {
             "error",
             {
               "types": {
+                "FC":{
+                  "message": "Use React.FC instead",
+                  "fixWith": "React.FC"
+                },
                 "React.FunctionComponent": {
                   "message": "Use React.FC instead",
                   "fixWith": "React.FC"
