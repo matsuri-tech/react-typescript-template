@@ -1,6 +1,22 @@
+# React Typescript Template
+
+
+このテンプレートは以下のエコシステムに依存しています。分からないものがあれば、まず目を通してください。
+
+- [npm](https://docs.npmjs.com/files/package.json) - package.jsonが分からない場合はこれを見てください。
+- [Yarn](https://yarnpkg.com/ja/docs/getting-started)
+- [React](https://reactjs.org/docs/getting-started.html)
+- [Redux](https://redux.js.org/introduction/getting-started)
+- [Typescript](http://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+- [styled-components](https://styled-components.com/docs/basics#getting-started)
+- [Webpack](https://webpack.js.org/guides/getting-started/)
+- [dotenv](https://github.com/motdotla/dotenv)
+- [ESLint](https://eslint.org/docs/user-guide/getting-started)
+- [VSCode](https://code.visualstudio.com/docs/getstarted/introvideos)
+
 ## React
 
-1. Reactのglobal import
+### Global React
 
 ```tsx
 // import * as React from "react" // 不要
@@ -9,7 +25,7 @@ const App =  () => {
 }
 ```
 
-2. Reduxの拡張
+### Redux types
 
 `useDispatch`及び`useSelector`の型定義を拡張しています。
 
@@ -27,7 +43,12 @@ const App =  () => {
 
 さらにreduxの型ヘルパーとして`StateType<Reducer>`と`ActionType<ActionCreators>`を用意しています。
 
-3. ProcessEnvの強い型定義
+## Dotenv, process.env
+
+`.env`ファイル、`.env.production`ファイルを編集することで、`process.env`を拡張できます。
+`.env.production`ファイルは`NODE_ENV`またはwebpackの`mode`が`production`であるときのみ読み込まれ、`.env`に記述された内容を上書きします。
+
+### ProcessEnvの強い型定義
 
 ProcessEnvに値を追加し補完を効かせたい場合は`src/global.d.ts`を直接編集してください。
 
@@ -47,7 +68,15 @@ declare namespace NodeJS {
 
 `public/index.html`
 
+デフォルトでは検索エンジンに乗らないようになっています。公開するサービスを作成する場合は以下の行を決してください。
+
+```html
+<meta name="robots" content="noindex,nofollow" />
+```
+
 ### OGPテンプレート
+
+> 不要な場合は決してください。
 
 一般的なOGP、Twitter OGP、Facebook OGPに対応しています。
 
@@ -120,22 +149,6 @@ declare module "*.svg"
 
 を参考に足りない拡張子を追記してください。
 
-## CSS
-
-このテンプレートでは、なるべくCSS in JSを使用することを想定しています。CSSやSCSS、PostCSSを主体的に使いたい場合はwebpackの書き換えを行う必要があるかもしれません。CSSファイルの`import`自体は可能です。
-
-### styled-components
-
-stylelint、babelをstyled-components用に調整しています。元々`dependencies`に含まれています。
-
-### reset.css
-
-ressを入れています。
-
-## React
-
-Typescriptを利用することを想定しています
-
 ### Alias
 
 `@/`で`src/`にアクセス出来ます
@@ -155,48 +168,3 @@ aliasを追加する場合、以下の3つの書き換えが必要です。
 
 eslintに記述されたecmaVersionの範疇を超える構文を扱えるようにするpluginを追加した場合は、eslintとbabel間で矛盾が発生します。eslintのparserにbabel-eslintを追加してください。
 
-#### ブラウザのカバー範囲
-
-[`> 0.1% in JP, not IE < 11, not op_mini all`](https://browserl.ist/?q=%3E0.1%25+in+JP%2C+not+IE+%3C+11%2C+not+op_mini+all)
-
-#### 設定
-
-- グローバル変数を使用して、各ファイルに共通のコード出力を1つにまとめることによって、重複するコード出力を減らす
-
-- styled-componntnsのclassNamesに環境間で一貫されたハッシュを行う
-
-- object rest spread `{...objects}`のサポート
-
-- 動的インポート`import(path/)`のサポート
-
-- classプロパティ`class A{ someProperty = "" }`のサポート
-
-- async/awaitのサポート
-
-## Webpack
-
-- [x] split chunks
-
-- [x] runtime chunk
-- [x] aggressive merging
-- [x] production mode 
-- [x] split entrypoint
-- [x] code splitting
-- [x] dotenv 
-
-## テストツール（Jest + Enzyme）
-
-- [x] config
-- [ ] サンプルの追加
-
-## フォーマッター
-
-- [x] editorconfig
-
-- [x] prettier
-
-## リンター
-
-- [x] commitlint
-- [x] stylelint
-- [x] Aslant
