@@ -12,6 +12,7 @@
 - [Alias, Aliasの追加](#alias-alias%e3%81%ae%e8%bf%bd%e5%8a%a0)
 - [構文の新規サポート](#%e6%a7%8b%e6%96%87%e3%81%ae%e6%96%b0%e8%a6%8f%e3%82%b5%e3%83%9d%e3%83%bc%e3%83%88)
 
+# React Typescript Template
 
 このテンプレートは以下のエコシステムに依存しています。分からないものがあれば、まず目を通してください。
 
@@ -176,5 +177,5 @@ aliasを追加する場合、以下の3つの書き換えが必要です。
 
 ## 構文の新規サポート
 
-eslintに記述されたecmaVersionの範疇を超える構文を扱えるようにするpluginを追加した場合は、eslintとbabel間で矛盾が発生します。eslintのparserにbabel-eslintを追加してください。
+eslintに記述されたecmaVersionの範疇を超える構文を扱えるようにするpluginを追加した場合は、eslintとbabel間で矛盾が発生します。eslintのparserにbabel-eslintを追加してください。
 
