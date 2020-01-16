@@ -1,4 +1,16 @@
-# React Typescript Template
+- [React](#react)
+  - [Global React](#global-react)
+  - [Redux types](#redux-types)
+- [Dotenv, process.env](#dotenv-processenv)
+  - [ProcessEnvの型](#processenv%e3%81%ae%e5%9e%8b)
+- [HTML](#html)
+  - [OGPテンプレート](#ogp%e3%83%86%e3%83%b3%e3%83%97%e3%83%ac%e3%83%bc%e3%83%88)
+  - [Faviconテンプレート](#favicon%e3%83%86%e3%83%b3%e3%83%97%e3%83%ac%e3%83%bc%e3%83%88)
+  - [Googleフォントの最適化](#google%e3%83%95%e3%82%a9%e3%83%b3%e3%83%88%e3%81%ae%e6%9c%80%e9%81%a9%e5%8c%96)
+- [Markdown](#markdown)
+- [Image](#image)
+- [Alias, Aliasの追加](#alias-alias%e3%81%ae%e8%bf%bd%e5%8a%a0)
+- [構文の新規サポート](#%e6%a7%8b%e6%96%87%e3%81%ae%e6%96%b0%e8%a6%8f%e3%82%b5%e3%83%9d%e3%83%bc%e3%83%88)
 
 
 このテンプレートは以下のエコシステムに依存しています。分からないものがあれば、まず目を通してください。
@@ -48,7 +60,7 @@ const App =  () => {
 `.env`ファイル、`.env.production`ファイルを編集することで、`process.env`を拡張できます。
 `.env.production`ファイルは`NODE_ENV`またはwebpackの`mode`が`production`であるときのみ読み込まれ、`.env`に記述された内容を上書きします。
 
-### ProcessEnvの強い型定義
+### ProcessEnvの型
 
 ProcessEnvに値を追加し補完を効かせたい場合は`src/global.d.ts`を直接編集してください。
 
@@ -149,11 +161,9 @@ declare module "*.svg"
 
 を参考に足りない拡張子を追記してください。
 
-### Alias
+## Alias, Aliasの追加
 
 `@/`で`src/`にアクセス出来ます
-
-#### Aliasを追加する場合
 
 aliasを追加する場合、以下の3つの書き換えが必要です。
 
@@ -164,7 +174,7 @@ aliasを追加する場合、以下の3つの書き換えが必要です。
 - [ ] jest.config.js
 - [ ] tsconfig.js
 
-### Babel
+## 構文の新規サポート
 
 eslintに記述されたecmaVersionの範疇を超える構文を扱えるようにするpluginを追加した場合は、eslintとbabel間で矛盾が発生します。eslintのparserにbabel-eslintを追加してください。
 
