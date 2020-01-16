@@ -87,6 +87,7 @@ module.exports = {
                 "@typescript-eslint/consistent-type-assertions": 2,
                 "@typescript-eslint/no-unnecessary-type-assertion": 2,
                 "@typescript-eslint/restrict-plus-operands": 2,
+                '@typescript-eslint/return-await': 'error',
 
                 // react-hooks
                 "react-hooks/rules-of-hooks": "error",
