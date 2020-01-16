@@ -112,7 +112,8 @@ module.exports = (_, { mode = "development" }) => {
         },
         plugins: [
             new webpack.DefinePlugin({
-                "process.env.NODE_ENV": '"production"',
+                "process.env.NODE_ENV":
+                    `"${process.env.NODE_ENV}"` || '"production"',
                 ...envKeys
             }),
             new webpack.ProvidePlugin({
@@ -168,7 +169,8 @@ module.exports = (_, { mode = "development" }) => {
                 template: path.resolve(__dirname, "public/index.html")
             }),
             new webpack.DefinePlugin({
-                "process.env.NODE_ENV": '"development"',
+                "process.env.NODE_ENV":
+                    `"${process.env.NODE_ENV}"` || '"development"',
                 ...envKeys
             }),
             new webpack.HotModuleReplacementPlugin()
