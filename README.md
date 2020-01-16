@@ -1,16 +1,20 @@
-- [React](#react)
-  - [Global React](#global-react)
-  - [Redux types](#redux-types)
-- [Dotenv, process.env](#dotenv-processenv)
-  - [ProcessEnvの型](#processenv%e3%81%ae%e5%9e%8b)
-- [HTML](#html)
-  - [OGPテンプレート](#ogp%e3%83%86%e3%83%b3%e3%83%97%e3%83%ac%e3%83%bc%e3%83%88)
-  - [Faviconテンプレート](#favicon%e3%83%86%e3%83%b3%e3%83%97%e3%83%ac%e3%83%bc%e3%83%88)
-  - [Googleフォントの最適化](#google%e3%83%95%e3%82%a9%e3%83%b3%e3%83%88%e3%81%ae%e6%9c%80%e9%81%a9%e5%8c%96)
-- [Markdown](#markdown)
-- [Image](#image)
-- [Alias, Aliasの追加](#alias-alias%e3%81%ae%e8%bf%bd%e5%8a%a0)
-- [構文の新規サポート](#%e6%a7%8b%e6%96%87%e3%81%ae%e6%96%b0%e8%a6%8f%e3%82%b5%e3%83%9d%e3%83%bc%e3%83%88)
+- [React Typescript Template](#react-typescript-template)
+  - [React](#react)
+    - [Global React](#global-react)
+    - [Redux types](#redux-types)
+  - [Dotenv, process.env](#dotenv-processenv)
+    - [ProcessEnvの型](#processenv%e3%81%ae%e5%9e%8b)
+  - [HTML](#html)
+    - [OGPテンプレート](#ogp%e3%83%86%e3%83%b3%e3%83%97%e3%83%ac%e3%83%bc%e3%83%88)
+    - [Faviconテンプレート](#favicon%e3%83%86%e3%83%b3%e3%83%97%e3%83%ac%e3%83%bc%e3%83%88)
+    - [Googleフォントの最適化](#google%e3%83%95%e3%82%a9%e3%83%b3%e3%83%88%e3%81%ae%e6%9c%80%e9%81%a9%e5%8c%96)
+  - [Markdown](#markdown)
+  - [Image](#image)
+  - [Alias, Aliasの追加](#alias-alias%e3%81%ae%e8%bf%bd%e5%8a%a0)
+  - [構文の新規サポート](#%e6%a7%8b%e6%96%87%e3%81%ae%e6%96%b0%e8%a6%8f%e3%82%b5%e3%83%9d%e3%83%bc%e3%83%88)
+  - [Netlify](#netlify)
+    - [Github Package Registoryを用いる場合](#github-package-registory%e3%82%92%e7%94%a8%e3%81%84%e3%82%8b%e5%a0%b4%e5%90%88)
+    - [production buildとdevelopment buildのコマンドを分けたい場合](#production-build%e3%81%a8development-build%e3%81%ae%e3%82%b3%e3%83%9e%e3%83%b3%e3%83%89%e3%82%92%e5%88%86%e3%81%91%e3%81%9f%e3%81%84%e5%a0%b4%e5%90%88)
 
 # React Typescript Template
 
@@ -26,6 +30,9 @@
 - [dotenv](https://github.com/motdotla/dotenv)
 - [ESLint](https://eslint.org/docs/user-guide/getting-started)
 - [VSCode](https://code.visualstudio.com/docs/getstarted/introvideos)
+- [Netlify](https://docs.netlify.com/site-deploys/overview/#deploy-contexts)
+  - [Netlify.toml](https://docs.netlify.com/configure-builds/file-based-configuration/#sample-file)
+
 
 ## React
 
@@ -178,4 +185,19 @@ aliasを追加する場合、以下の3つの書き換えが必要です。
 ## 構文の新規サポート
 
 eslintに記述されたecmaVersionの範疇を超える構文を扱えるようにするpluginを追加した場合は、eslintとbabel間で矛盾が発生します。eslintのparserにbabel-eslintを追加してください。
+
+## Netlify
+
+### Github Package Registoryを用いる場合
+
+[scripts/netlify-preinstall.js](https://github.com/matsuri-tech/react-typescript-template/blob/master/scripts/netlify-preinstall.js)を見てください。
+
+Github Package Registoryを用いない場合は決してかまいません。その場合はpackage.jsonのscripts→preinstallも削除してください。
+
+### production buildとdevelopment buildのコマンドを分けたい場合
+
+[netlify.toml.template](https://github.com/matsuri-tech/react-typescript-template/blob/master/netlify.toml.template)を参考にしてください。
+
+使用する場合は、このファイル名の末尾`.template`を削除してください。
+
 
