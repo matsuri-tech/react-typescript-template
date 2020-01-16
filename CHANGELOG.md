@@ -2,6 +2,41 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://git-matsuri.xyz/developer/matsuri-react-app-template/compare/v1.2.0...v1.3.0) (2020-01-16)
+
+
+### Features
+
+* **eslint:** enable `typescript-eslint/return-await` ([16758f1](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/16758f19299098deb515420b482e58d4dfad7eb6)), closes [#142](https://git-matsuri.xyz/developer/matsuri-react-app-template/issues/142)
+* **scripts:** add dev:local ([31b2567](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/31b2567873d881aa3726820c9454596bebd3b2dd))
+
+
+### Bug Fixes
+
+* **scripts:** rename build-dev with build:dev ([2ab2d1f](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/2ab2d1f7316f30aa6953551ec7e5f77ad9c6f163))
+
+
+### Documents
+
+* **readme:** add title ([a8efc89](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/a8efc89a91ab9521c590a734c7f694649ecf6b23))
+* **readme:** add toc ([18440bb](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/18440bbb8a33500c112d5cc6c28a301fe27bc432))
+* **readme:** update ([b80fdb7](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/b80fdb73661bee338777032d1e5dbfe8ccd5a218))
+
+
+### Others
+
+* **deps:** maintain lock file ([e32b764](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/e32b764cc8e8e45b579190f6fecbc9ac8c30123e))
+* **deps:** update babel monorepo to v7.8.3 ([#141](https://git-matsuri.xyz/developer/matsuri-react-app-template/issues/141)) ([aa856d1](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/aa856d158370fac33e0b2ce14e51d41918615bb5))
+* **deps:** update dependency @types/styled-components to v4.4.2 ([#132](https://git-matsuri.xyz/developer/matsuri-react-app-template/issues/132)) ([46c3aaf](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/46c3aaf251ce89e29a836f1175b0c3a8117e9d1d))
+* **deps:** update dependency css-loader to v3.4.2 ([#136](https://git-matsuri.xyz/developer/matsuri-react-app-template/issues/136)) ([6702cc3](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/6702cc3bf9a509934c0a0d0f49a43ab388177e60))
+* **deps:** update dependency husky to v4 ([#135](https://git-matsuri.xyz/developer/matsuri-react-app-template/issues/135)) ([1310ba8](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/1310ba88ef9c544281a542ef23e7c9ef19d8d360))
+* **deps:** update dependency styled-components to v5 ([#140](https://git-matsuri.xyz/developer/matsuri-react-app-template/issues/140)) ([1d89b00](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/1d89b00a0b6507f9a9061f60619c33d8986df53a))
+* **deps:** update dependency stylelint to v13 ([#138](https://git-matsuri.xyz/developer/matsuri-react-app-template/issues/138)) ([ed2a0e7](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/ed2a0e7491890b6316fa0fc9ffa1e9117d0aa286))
+* **deps:** update dependency ts-jest to v24.3.0 ([#133](https://git-matsuri.xyz/developer/matsuri-react-app-template/issues/133)) ([e1571c8](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/e1571c8ed3ca81f9d189d34f37e7b09726004d27))
+* **deps:** update storybook monorepo to ^5.3.3 ([#137](https://git-matsuri.xyz/developer/matsuri-react-app-template/issues/137)) ([0de87fe](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/0de87fe49ba56b88cdf5334f4ecd594c6bc029f1))
+* **deps:** update typescript-eslint monorepo to v2.16.0 ([#131](https://git-matsuri.xyz/developer/matsuri-react-app-template/issues/131)) ([9719afd](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/9719afd95f32b131db4d5d0f38cc710c7f33ffc5))
+* **netlify:** add netlify.toml ([b08df2a](https://git-matsuri.xyz/developer/matsuri-react-app-template/commit/b08df2aee90f59427d15b4f3008440035adca9ac)), closes [#130](https://git-matsuri.xyz/developer/matsuri-react-app-template/issues/130)
+
 ## [1.2.0](https://git-matsuri.xyz/developer/matsuri-react-app-template/compare/v1.1.2...v1.2.0) (2020-01-06)
 
 
