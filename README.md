@@ -13,12 +13,16 @@
   - [Alias, Aliasの追加](#alias-alias%e3%81%ae%e8%bf%bd%e5%8a%a0)
   - [構文の新規サポート](#%e6%a7%8b%e6%96%87%e3%81%ae%e6%96%b0%e8%a6%8f%e3%82%b5%e3%83%9d%e3%83%bc%e3%83%88)
   - [Netlify](#netlify)
+    - [Netlifyの設定](#netlify%e3%81%ae%e8%a8%ad%e5%ae%9a)
     - [Github Package Registoryを用いる場合](#github-package-registory%e3%82%92%e7%94%a8%e3%81%84%e3%82%8b%e5%a0%b4%e5%90%88)
     - [production buildとdevelopment buildのコマンドを分けたい場合](#production-build%e3%81%a8development-build%e3%81%ae%e3%82%b3%e3%83%9e%e3%83%b3%e3%83%89%e3%82%92%e5%88%86%e3%81%91%e3%81%9f%e3%81%84%e5%a0%b4%e5%90%88)
+  - [commitlint, angular commit guideline](#commitlint-angular-commit-guideline)
+  - [React HooksやReduxの使用について](#react-hooks%e3%82%84redux%e3%81%ae%e4%bd%bf%e7%94%a8%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6)
+    - [Hooksの切り出し例](#hooks%e3%81%ae%e5%88%87%e3%82%8a%e5%87%ba%e3%81%97%e4%be%8b)
 
 # React Typescript Template
 
-このテンプレートは以下のエコシステムに依存しています。分からないものがあれば、まず目を通してください。
+各エコシスムのチュートリアルドキュメント
 
 - [npm](https://docs.npmjs.com/files/package.json) - package.jsonが分からない場合はこれを見てください。
 - [Yarn](https://yarnpkg.com/ja/docs/getting-started)
@@ -29,10 +33,9 @@
 - [Webpack](https://webpack.js.org/guides/getting-started/)
 - [dotenv](https://github.com/motdotla/dotenv)
 - [ESLint](https://eslint.org/docs/user-guide/getting-started)
-- [VSCode](https://code.visualstudio.com/docs/getstarted/introvideos)
+- [VSCode](https://code.visualstudio.com/docs/getstarted/introvideos) - VSCodeで記述されることを前提にしています。
 - [Netlify](https://docs.netlify.com/site-deploys/overview/#deploy-contexts)
   - [Netlify.toml](https://docs.netlify.com/configure-builds/file-based-configuration/#sample-file)
-
 
 ## React
 
@@ -188,6 +191,22 @@ eslintに記述されたecmaVersionの範疇を超える構文を扱えるよう
 
 ## Netlify
 
+### Netlifyの設定
+
+1. [Netlify](https://app.netlify.com/teams/matsuritech-i-bimrs/sites)にアクセス
+2. `New site from Git`
+3. `Github`
+4. `Configure Netlify on Github`
+5. `matsuri-tech`
+6. `Repository access`の`Select repositories`からリポジトリを選択
+7. `Save`
+8. ポップアップを閉じ、自身のユーザー名が表示されているセレクトフォームをクリックし、matsuri-techを選択
+9. 検索フォームにリポジトリ名を入力し、選択
+10. `Basic build settings`の`Build command`に`yarn build`、`Publish directory`に`dist`と入力
+11. `Deploy site`
+12. `Site setting`
+13. `Site information`の`Change site name`を押し、`Site name`をサービス名に変更
+
 ### Github Package Registoryを用いる場合
 
 [scripts/netlify-preinstall.js](https://github.com/matsuri-tech/react-typescript-template/blob/master/scripts/netlify-preinstall.js)を見てください。
@@ -200,4 +219,83 @@ Github Package Registoryを用いない場合は決してかまいません。�
 
 使用する場合は、このファイル名の末尾`.template`を削除してください。
 
+## commitlint, angular commit guideline
 
+commitlintはprecommitで発火します。
+
+コミットのルールについては[COMMIT_GUIDELINE](https://github.com/matsuri-tech/react-typescript-template/blob/master/COMMIT_GUIDELINE.md)を見てください。
+
+## React HooksやReduxの使用について
+
+1. View単位でロジックをCustom HooksやReduxのActionに切り出す
+2. 共通するロジックをさらに切り出す
+
+
+### Hooksの切り出し例
+
+```tsx
+// src/pages/Home.tsx
+const Home = () => {
+  const [/*...*/] = useState()
+  useEffect(() => {
+    //...
+  },[/*...*/])
+  return (
+    <div>{/*...*/}</div>
+  )
+}
+```
+
+ロジックをCustom Hooksに切り出す
+
+```tsx
+// src/pages/Home/useHome.tsx
+const useHome = () => {
+  const [/*...*/] = useState()
+  useEffect(() => {
+    //...
+  },[/*...*/])
+  return /*...*/
+}
+
+// src/pages/Home/index.tsx (またはHome.tsx)
+const Home = () => {
+  const /*...*/ = useHome()
+  return (
+    <div>{/*...*/}</div>
+  )
+}
+
+```
+
+複数のCustom Hooks内で共通するロジックを切り出す
+
+```tsx
+// src/hooks/useCustomHooks
+const useCustomHooks = () => {
+  /*...*/
+}
+
+// src/pages/About/useAbout.tsx
+const useAbout = () => {
+  const /*...*/ = useState()
+  useCustomHooks()
+  return /*...*/
+}
+
+// src/pages/Home/useHome.tsx
+const useHome = () => {
+  const /*...*/ = useState()
+  useCustomHooks()
+  return /*...*/
+}
+
+// src/pages/Home/index.tsx
+const Home = () => {
+  const /*...*/ = useHome()
+  return (
+    <div>{/*...*/}</div>
+  )
+}
+
+```
