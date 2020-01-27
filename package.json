@@ -113,7 +113,7 @@
         "start": "npx serve dist",
         "test": "jest",
         "update": "yarn upgrade-interactive --latest",
-        "typecheck": "tsc --project tsconfig.json",
+        "typecheck": "tsc --project tsconfig.json #",
         "lint:ts": "eslint ./src/**/*.ts ./src/**/*.tsx  --cache",
         "lint:js": "eslint ./*.js --cache",
         "lint:json": "prettier '*.json'",
@@ -134,6 +134,18 @@
             "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
             "pre-commit": "lint-staged"
         }
+    },
+    "browserslist": {
+        "production": [
+            ">0.2% in JP",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
     },
     "lint-staged": {
         "./.circleci/config.yml": [
