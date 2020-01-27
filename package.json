@@ -113,7 +113,7 @@
         "start": "npx serve dist",
         "test": "jest",
         "update": "yarn upgrade-interactive --latest",
-        "typecheck": "tsc --declaration --project . --noemit",
+        "typecheck": "tsc --project tsconfig.json",
         "lint:ts": "eslint ./src/**/*.ts ./src/**/*.tsx  --cache",
         "lint:js": "eslint ./*.js --cache",
         "lint:json": "prettier '*.json'",
@@ -147,7 +147,6 @@
         "*.{ts,tsx}": [
             "yarn typecheck",
             "yarn lint:fix:ts",
-            "yarn lint:style",
             "git add"
         ],
         "*.{json}": [
