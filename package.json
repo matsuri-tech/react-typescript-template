@@ -45,7 +45,7 @@
         "@storybook/addons": "^5.3.9",
         "@storybook/react": "^5.3.9",
         "@storybook/source-loader": "^5.3.9",
-        "@types/enzyme": "3.10.4",
+        "@types/enzyme": "3.10.5",
         "@types/enzyme-adapter-react-16": "1.0.5",
         "@types/jest": "24.9.1",
         "@types/react": "16.9.19",
