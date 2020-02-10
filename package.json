@@ -3,9 +3,9 @@
     "title": "Edit package.json",
     "description": "Edit package.json",
     "homepage": "https://edit-package.json",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "@matsuri-tech/react-typescript-template": {
-        "version": "1.3.0"
+        "version": "1.4.0"
     },
     "repository": "git@github.com:matsuri-tech/react-typescript-template.git",
     "license": "GPL-3.0",
