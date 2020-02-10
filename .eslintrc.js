@@ -19,11 +19,12 @@ module.exports = {
     ],
     plugins: ["@typescript-eslint", "react-hooks","sort-imports-es6-autofix"],
     rules: {
-        "sort-imports-es6-autofix/sort-imports-es6": [2, { // 通常のsort-importsではautofixが効かないパターンが多いため
+        // 通常のsort-importsではautofixが効かないパターンが多いため
+        "sort-imports-es6-autofix/sort-imports-es6": [2, {
             "ignoreCase": false,
             "ignoreMemberSort": false,
             "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
-          }],
+        }],
         "@typescript-eslint/ban-types": [
             "error",
             {
@@ -99,7 +100,8 @@ module.exports = {
 
                 // react typescript
                 "@typescript-eslint/explicit-function-return-type": "off",
-                "react/prop-types": "off"
+                "react/prop-types": "off",
+                "no-console":  ["error", { allow: ["error", "warn"] }]
             }
         },
         {
