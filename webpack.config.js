@@ -110,9 +110,6 @@ module.exports = (_, { mode = "development" }) => {
                     `"${process.env.NODE_ENV}"` || '"production"',
                 ...envKeys
             }),
-            new webpack.ProvidePlugin({
-                React: "react"
-            }),
             /** @see https://github.com/webpack/webpack/tree/master/examples/aggressive-merging */
             new AggressiveMergingPlugin(),
             new MiniCssExtractPlugin({
@@ -148,10 +145,6 @@ module.exports = (_, { mode = "development" }) => {
             enforce: "pre"
         })
         config.plugins = [
-            new webpack.ProvidePlugin({
-                React: "react",
-                ReactDOM: "react-dom"
-            }),
             new MiniCssExtractPlugin({
                 filename: "static/styles/[name].[chunkhash:8].css",
                 chunkFilename: "static/styles/[id].[chunkhash:8].css"

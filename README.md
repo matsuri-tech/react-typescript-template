@@ -1,6 +1,5 @@
 - [React Typescript Template](#react-typescript-template)
   - [React](#react)
-    - [Global React](#global-react)
     - [Redux types](#redux-types)
   - [Dotenv, process.env](#dotenv-processenv)
     - [ProcessEnvの型](#processenv%e3%81%ae%e5%9e%8b)
@@ -37,15 +36,6 @@
   - [Netlify.toml](https://docs.netlify.com/configure-builds/file-based-configuration/#sample-file)
 
 ## React
-
-### Global React
-
-```tsx
-// import * as React from "react" // 不要
-const App =  () => {
-  <div>Hello, World</div>
-}
-```
 
 ### Redux types
 

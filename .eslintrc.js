@@ -61,7 +61,6 @@ module.exports = {
             rules: {
                 "react/self-closing-comp": 2,
                 
-                "react/react-in-jsx-scope": 0,
                 "prefer-object-spread": "error",
 
                 "@typescript-eslint/interface-name-prefix": [2, "never"],
