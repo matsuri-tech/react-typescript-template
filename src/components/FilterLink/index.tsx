@@ -1,7 +1,8 @@
-import { Link } from "@/components/Link"
+import { Link } from "../Link"
 import { useCallback } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { visibilityFilters } from "@/redux/constants/visibilityFilters"
+import { visibilityFilters } from "../../redux/constants/visibilityFilters"
+import React from "react"
 
 export interface FilterLinkProps {
     filter: keyof typeof visibilityFilters

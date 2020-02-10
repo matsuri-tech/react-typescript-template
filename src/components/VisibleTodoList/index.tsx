@@ -1,7 +1,8 @@
 import { Store, useDispatch, useSelector } from "react-redux"
-import { TodoList } from "@/components/TodoList"
+import { TodoList } from "../TodoList"
 import { useCallback } from "react"
-import { visibilityFilters } from "@/redux/constants"
+import { visibilityFilters } from "../../redux/constants"
+import React from "react"
 
 export interface VisibleTodoListProps {}
 

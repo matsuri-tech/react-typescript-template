@@ -1,5 +1,5 @@
-import { Todo } from "@/components/Todo"
-import { useCallback } from "react"
+import { Todo } from "../Todo"
+import React, { useCallback } from "react"
 import styled from "styled-components"
 
 export interface TodoListProps {
