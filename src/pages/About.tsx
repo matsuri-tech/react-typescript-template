@@ -1,3 +1,4 @@
+import React from "react"
 export const About: Page = () => {
     return <h2>About</h2>
 }

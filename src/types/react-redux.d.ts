@@ -1,7 +1,7 @@
-import * as actions from "@/redux/actions"
+import * as actions from "../redux/actions"
 import { Dispatch } from "redux"
 import { useDispatch } from "react-redux"
-import rootReducer from "@/redux/reducers"
+import rootReducer from "../redux/reducers"
 
 declare module "react-redux" {
     type Store = StateType<typeof rootReducer>

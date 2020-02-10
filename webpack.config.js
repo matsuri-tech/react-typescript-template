@@ -8,6 +8,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const dotenv = require("dotenv")
 const pkg = require("./package.json")
 const TerserPlugin = require("terser-webpack-plugin")
+const StatsPlugin = require("stats-webpack-plugin")
 
 module.exports = (_, { mode = "development" }) => {
     const env = dotenv.config().parsed
@@ -40,10 +41,7 @@ module.exports = (_, { mode = "development" }) => {
         /** @see https://webpack.js.org/configuration/devtool/#devtool */
         devtool: "",
         resolve: {
-            extensions: [".js", ".jsx", ".ts", ".tsx"],
-            alias: {
-                "@": path.resolve(__dirname, "src")
-            }
+            extensions: [".js", ".jsx", ".ts", ".tsx"]
         },
         module: {
             rules: [
@@ -52,7 +50,10 @@ module.exports = (_, { mode = "development" }) => {
 
                     exclude: /node_modules/,
                     use: {
-                        loader: "babel-loader"
+                        loader: "babel-loader",
+                        options: {
+                            babelrc: true
+                        }
                     }
                 },
                 {
@@ -116,9 +117,6 @@ module.exports = (_, { mode = "development" }) => {
                     `"${process.env.NODE_ENV}"` || '"production"',
                 ...envKeys
             }),
-            new webpack.ProvidePlugin({
-                React: "react"
-            }),
             /** @see https://github.com/webpack/webpack/tree/master/examples/aggressive-merging */
             new AggressiveMergingPlugin(),
             new MiniCssExtractPlugin({
@@ -154,10 +152,6 @@ module.exports = (_, { mode = "development" }) => {
             enforce: "pre"
         })
         config.plugins = [
-            new webpack.ProvidePlugin({
-                React: "react",
-                ReactDOM: "react-dom"
-            }),
             new MiniCssExtractPlugin({
                 filename: "static/styles/[name].[chunkhash:8].css",
                 chunkFilename: "static/styles/[id].[chunkhash:8].css"
@@ -173,7 +167,11 @@ module.exports = (_, { mode = "development" }) => {
                     `"${process.env.NODE_ENV}"` || '"development"',
                 ...envKeys
             }),
-            new webpack.HotModuleReplacementPlugin()
+            new webpack.HotModuleReplacementPlugin(),
+            new StatsPlugin("stats.json", {
+                chunkModules: true,
+                exclude: [/node_modules[\\/]react/]
+            })
         ]
         config.devServer = {
             historyApiFallback: true,

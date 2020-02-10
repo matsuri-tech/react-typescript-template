@@ -3,8 +3,9 @@ import "ress"
 import { App } from "./App"
 import { Provider } from "react-redux"
 import { createStore } from "redux"
+import React from "react"
 import ReactDOM from "react-dom"
-import rootReducer from "@/redux/reducers"
+import rootReducer from "./redux/reducers"
 
 const store = createStore(rootReducer)
 
