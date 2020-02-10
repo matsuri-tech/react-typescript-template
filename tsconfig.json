@@ -1,10 +1,6 @@
 {
     "compilerOptions": {
         "baseUrl": "./",
-        "paths": {
-            "@/": ["src"], // must match this settings with webpack.config.js → resolve → alias
-            "@/*": ["src/*"] // must match this settings with webpack.config.js → resolve → alias
-        },
         "allowSyntheticDefaultImports": true,
         "declaration": true,
         "declarationDir": "./dist",

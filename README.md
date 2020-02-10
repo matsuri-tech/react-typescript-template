@@ -10,7 +10,6 @@
     - [Googleフォントの最適化](#google%e3%83%95%e3%82%a9%e3%83%b3%e3%83%88%e3%81%ae%e6%9c%80%e9%81%a9%e5%8c%96)
   - [Markdown](#markdown)
   - [Image](#image)
-  - [Alias, Aliasの追加](#alias-alias%e3%81%ae%e8%bf%bd%e5%8a%a0)
   - [構文の新規サポート](#%e6%a7%8b%e6%96%87%e3%81%ae%e6%96%b0%e8%a6%8f%e3%82%b5%e3%83%9d%e3%83%bc%e3%83%88)
   - [Netlify](#netlify)
     - [Netlifyの設定](#netlify%e3%81%ae%e8%a8%ad%e5%ae%9a)
@@ -171,19 +170,6 @@ declare module "*.svg"
 ```
 
 を参考に足りない拡張子を追記してください。
-
-## Alias, Aliasの追加
-
-`@/`で`src/`にアクセス出来ます
-
-aliasを追加する場合、以下の3つの書き換えが必要です。
-
-また追加する場合は`Alias`の項目に追記してください。
-
-- [ ] webpack.config.je
-
-- [ ] jest.config.js
-- [ ] tsconfig.js
 
 ## 構文の新規サポート
 

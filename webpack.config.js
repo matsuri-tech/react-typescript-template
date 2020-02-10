@@ -39,12 +39,6 @@ module.exports = (_, { mode = "development" }) => {
         },
         /** @see https://webpack.js.org/configuration/devtool/#devtool */
         devtool: "",
-        resolve: {
-            extensions: [".js", ".jsx", ".ts", ".tsx"],
-            alias: {
-                "@": path.resolve(__dirname, "src")
-            }
-        },
         module: {
             rules: [
                 {
