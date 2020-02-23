@@ -109,6 +109,7 @@
     "scripts": {
         "preinstall": "node ./scripts/netlify-preinstall.js",
         "dev": "webpack-dev-server --open --colors --hot --mode development --history-api-fallback",
+        "dev:https": "webpack-dev-server --open --colors --hot --mode development --history-api-fallback --https",
         "dev:local": "NODE_ENV=local webpack-dev-server --open --colors --hot --mode development --history-api-fallback",
         "build": "webpack --mode production",
         "build:dev": "webpack --mode development",

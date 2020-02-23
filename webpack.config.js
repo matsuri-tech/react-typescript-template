@@ -177,6 +177,7 @@ module.exports = (_, { mode = "development" }) => {
             historyApiFallback: true,
             contentBase: path.resolve(__dirname, "public"),
             host: "0.0.0.0",
+            port: 3000,
             useLocalIp: true,
             stats: {
                 colors: true,
