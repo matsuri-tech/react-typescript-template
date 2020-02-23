@@ -1,4 +1,9 @@
-{
+{   
+    "watchOptions":{
+        "watchFile":"useFsEvents",
+        "watchDirectory":"useFsEvents",
+        "fallbackPolling": "dynamicPriority"
+    },
     "compilerOptions": {
         "baseUrl": "./",
         "allowSyntheticDefaultImports": true,
