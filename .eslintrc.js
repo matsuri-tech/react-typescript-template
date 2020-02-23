@@ -100,7 +100,7 @@ module.exports = {
                 // react typescript
                 "@typescript-eslint/explicit-function-return-type": "off",
                 "react/prop-types": "off",
-                "no-console":  ["error", { allow: ["error", "warn"] }]
+                "no-console":  ["error", { allow: ["error", "warn", "info"] }]
             }
         },
         {
