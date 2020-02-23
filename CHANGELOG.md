@@ -2,6 +2,91 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/matsuri-tech/react-typescript-template/compare/v1.3.0...v2.0.0) (2020-02-23)
+
+
+### Bug Fixes
+
+* rename repository path with current repository ([2e88277](https://github.com/matsuri-tech/react-typescript-template/commit/2e882771d23ac34722c1bb58c21d5de0d1fc7033))
+
+
+### Documents
+
+* **readme:** update ([499429e](https://github.com/matsuri-tech/react-typescript-template/commit/499429eb54de56687922f916bd872d429e5c6f06))
+
+
+### Others
+
+* **deps:** add support of ts 3.8 ([dde912d](https://github.com/matsuri-tech/react-typescript-template/commit/dde912d69314eabc6d0418b176f8710cbe4d9c3a))
+* **deps:** update dependency @types/enzyme-adapter-react-16 to v1.0.6 ([932c777](https://github.com/matsuri-tech/react-typescript-template/commit/932c77730ef26dcbd137c15e58a00762b01f7eea))
+* **deps:** update dependency @types/jest to v25 ([e9e7dde](https://github.com/matsuri-tech/react-typescript-template/commit/e9e7ddec757bc0d0d0808fc28403f7422c34fa77))
+* **deps:** update dependency @types/jest to v25.1.3 ([b15720e](https://github.com/matsuri-tech/react-typescript-template/commit/b15720e6ffa4d880ea7067fba3aa65dd2bc7a92e))
+* **deps:** update dependency @types/react to v16.9.20 ([f1ad720](https://github.com/matsuri-tech/react-typescript-template/commit/f1ad720cddc068d3f7faa658615455d449e7bd19))
+* **deps:** update dependency @types/react to v16.9.21 ([56eedfd](https://github.com/matsuri-tech/react-typescript-template/commit/56eedfddce4c2afbbfa6704a61d25419ee6033ef))
+* **deps:** update dependency @types/react to v16.9.22 ([e6e27a7](https://github.com/matsuri-tech/react-typescript-template/commit/e6e27a7d3781f599d902c36b2582a247f95c98e7))
+* **deps:** update dependency @types/styled-components to v4.4.3 ([8d4e648](https://github.com/matsuri-tech/react-typescript-template/commit/8d4e6487048388504ca1e80d29c6b8cb881c5e2a))
+* **deps:** update dependency @types/styled-components to v5 ([7284694](https://github.com/matsuri-tech/react-typescript-template/commit/728469402d4f9f2342cf6f1db42a519b00e32f13))
+* **deps:** update dependency csstype to v2.6.9 ([239829f](https://github.com/matsuri-tech/react-typescript-template/commit/239829f3abc9a1b0d7606d95a9c32ad5b68f7034))
+* **deps:** update dependency eslint-plugin-react-hooks to v2.4.0 ([5770432](https://github.com/matsuri-tech/react-typescript-template/commit/57704322db873b43d3c09c6a3cfc5436662af4ab))
+* **deps:** update dependency file-loader to ^5.1.0 ([ab2bf20](https://github.com/matsuri-tech/react-typescript-template/commit/ab2bf20cec257707968bef43c61e4e15656ff155))
+* **deps:** update dependency husky to v4.2.3 ([71c236d](https://github.com/matsuri-tech/react-typescript-template/commit/71c236d40c68b901d4126cded1f815f7fd8b2949))
+* **deps:** update dependency react-redux to v7.2.0 ([e3d1cfe](https://github.com/matsuri-tech/react-typescript-template/commit/e3d1cfe216769b4d4cd0a71ef586ebec4b9e7b69))
+* **deps:** update dependency rimraf to v3.0.2 ([74c0714](https://github.com/matsuri-tech/react-typescript-template/commit/74c0714ce3c20d6a1b1affd37d20a08198b19f67))
+* **deps:** update dependency stylelint to ^13.1.0 ([88e9f3e](https://github.com/matsuri-tech/react-typescript-template/commit/88e9f3ec04457d99d02b73e5bddf932cc062f581))
+* **deps:** update dependency stylelint to ^13.2.0 ([ac9abac](https://github.com/matsuri-tech/react-typescript-template/commit/ac9abacd3e3f03c3df382e84e00dead271afd8b8))
+* **deps:** update dependency ts-jest to v25.2.1 ([a38460d](https://github.com/matsuri-tech/react-typescript-template/commit/a38460dd637cb4badd3426c8268ee9360f5d0fbe))
+* **deps:** update dependency typescript to v3.8.2 ([91c9dcc](https://github.com/matsuri-tech/react-typescript-template/commit/91c9dcc3c83f41eb7c8e1242d325efad5ec4d235))
+* **deps:** update dependency webpack to v4.41.6 ([6682304](https://github.com/matsuri-tech/react-typescript-template/commit/6682304075ee14bd438f65fde9164a0c27eda861))
+* **deps:** update dependency webpack-cli to v3.3.11 ([3bc5c40](https://github.com/matsuri-tech/react-typescript-template/commit/3bc5c408678fea10c06621db8f63ae125350f017))
+* **deps:** update storybook monorepo to ^5.3.12 ([e380a3e](https://github.com/matsuri-tech/react-typescript-template/commit/e380a3e15a9f61a591fa31c95bbbfb8853913cd5))
+* **deps:** update storybook monorepo to ^5.3.13 ([9cc9794](https://github.com/matsuri-tech/react-typescript-template/commit/9cc97943121288a673d752105a785191d93cdf89))
+* **deps:** update typescript-eslint monorepo to v2.19.0 ([da36dd4](https://github.com/matsuri-tech/react-typescript-template/commit/da36dd4b18e52783451a218bc8021333f7a6c38f))
+* **deps:** update typescript-eslint monorepo to v2.19.2 ([b05155d](https://github.com/matsuri-tech/react-typescript-template/commit/b05155d222d98908f432b506ea1cf00e5076594b))
+* **deps:** update typescript-eslint monorepo to v2.20.0 ([d1b84f2](https://github.com/matsuri-tech/react-typescript-template/commit/d1b84f2508dfa075ba09a4a8e179ea57b44b7e39))
+* **eslint:** allow console.error & console.warning ([e0b3964](https://github.com/matsuri-tech/react-typescript-template/commit/e0b3964d25cea7f0774c675790bc6a22a06e3767)), closes [#171](https://github.com/matsuri-tech/react-typescript-template/issues/171)
+* **lint:** allow console.info ([bac9cc0](https://github.com/matsuri-tech/react-typescript-template/commit/bac9cc0f03ec7a8fd8bf57525b64d859c53b7a84))
+* **scripts:** add analyze script ([b5d9991](https://github.com/matsuri-tech/react-typescript-template/commit/b5d99916e795e4876532a55f2564541118bdfb4c))
+* **scripts:** add support of running on https ([e4add2c](https://github.com/matsuri-tech/react-typescript-template/commit/e4add2c040933378513ec2f85e3799c04ac70fab))
+* disabled path alias `@` ([230a030](https://github.com/matsuri-tech/react-typescript-template/commit/230a030fd0f95ab4e4f41436599729bbf5cfb68c)), closes [#172](https://github.com/matsuri-tech/react-typescript-template/issues/172)
+* remove global React ([1687faf](https://github.com/matsuri-tech/react-typescript-template/commit/1687faf211c7153c97d92cecd4429ea8dc5214aa))
+* windowsへの互換性の対応 ([ed02929](https://github.com/matsuri-tech/react-typescript-template/commit/ed0292931e65300246219339b3594ab244ecb3bb))
+* **release:** 1.4.0 ([668337b](https://github.com/matsuri-tech/react-typescript-template/commit/668337b832b25741dc02c817a5d6b5397e2df059))
+* format file ([dfc7305](https://github.com/matsuri-tech/react-typescript-template/commit/dfc7305b17e0b18fe568414f2052b8a560666a74))
+* **deps:** update babel monorepo to v7.8.4 ([afee6a2](https://github.com/matsuri-tech/react-typescript-template/commit/afee6a2b5442325ad0110018aa8dcd710db9cccc))
+* **deps:** update dependency @commitlint/cli to ^8.3.5 ([#144](https://github.com/matsuri-tech/react-typescript-template/issues/144)) ([ca5424d](https://github.com/matsuri-tech/react-typescript-template/commit/ca5424dc053ea74635b03d2b697e8563261ddb4b))
+* **deps:** update dependency @types/enzyme to v3.10.5 ([aa71336](https://github.com/matsuri-tech/react-typescript-template/commit/aa7133673f4a2b4d685b72331842e9600cfcc2a7))
+* **deps:** update dependency @types/jest to v24.9.0 ([#143](https://github.com/matsuri-tech/react-typescript-template/issues/143)) ([fe9b26e](https://github.com/matsuri-tech/react-typescript-template/commit/fe9b26e419f8d6d41b53d051ddb1d06b4f223ada))
+* **deps:** update dependency @types/jest to v24.9.1 ([#160](https://github.com/matsuri-tech/react-typescript-template/issues/160)) ([f128147](https://github.com/matsuri-tech/react-typescript-template/commit/f1281473bbfa774eb410e826de05ff57f1cbd46a))
+* **deps:** update dependency @types/react to v16.9.18 ([#153](https://github.com/matsuri-tech/react-typescript-template/issues/153)) ([767f382](https://github.com/matsuri-tech/react-typescript-template/commit/767f382cc736fa7400682674762a386a0159d294))
+* **deps:** update dependency @types/react to v16.9.19 ([#155](https://github.com/matsuri-tech/react-typescript-template/issues/155)) ([c55c9ce](https://github.com/matsuri-tech/react-typescript-template/commit/c55c9ce184018c3292dfdfd9197d516591dc07a9))
+* **deps:** update dependency @types/react-redux to v7.1.6 ([#146](https://github.com/matsuri-tech/react-typescript-template/issues/146)) ([ca58a5d](https://github.com/matsuri-tech/react-typescript-template/commit/ca58a5d3d9a25682026c9db7000abca486da0f1e))
+* **deps:** update dependency @types/react-redux to v7.1.7 ([#161](https://github.com/matsuri-tech/react-typescript-template/issues/161)) ([c939ea4](https://github.com/matsuri-tech/react-typescript-template/commit/c939ea410f152dd1e33ec24275431410b0e4c985))
+* **deps:** update dependency babel-plugin-styled-components to v1.10.7 ([#164](https://github.com/matsuri-tech/react-typescript-template/issues/164)) ([ccec0a1](https://github.com/matsuri-tech/react-typescript-template/commit/ccec0a138f1ba89f6425689f7e2f05a3d18d0bc0))
+* **deps:** update dependency enzyme-to-json to v3.4.4 ([ceb6ee3](https://github.com/matsuri-tech/react-typescript-template/commit/ceb6ee3ca1ff40bb03f40ec8508a8ad43f3a5b20))
+* **deps:** update dependency eslint-config-prettier to v6.10.0 ([dd784b8](https://github.com/matsuri-tech/react-typescript-template/commit/dd784b8c185526d540ea90a5c77b6d350feafda5))
+* **deps:** update dependency eslint-plugin-react to v7.18.0 ([#147](https://github.com/matsuri-tech/react-typescript-template/issues/147)) ([98f3322](https://github.com/matsuri-tech/react-typescript-template/commit/98f3322afaf44ec3a5297883613eeecdb5bc21a3))
+* **deps:** update dependency eslint-plugin-react to v7.18.3 ([d30cf6e](https://github.com/matsuri-tech/react-typescript-template/commit/d30cf6ef6cbce4e3a5e909c09f05ee6ada86f0bb))
+* **deps:** update dependency husky to v4.0.10 ([#145](https://github.com/matsuri-tech/react-typescript-template/issues/145)) ([715baf3](https://github.com/matsuri-tech/react-typescript-template/commit/715baf3842011303e71599f3416fed7e227bbea6))
+* **deps:** update dependency husky to v4.2.1 ([#157](https://github.com/matsuri-tech/react-typescript-template/issues/157)) ([f35ce75](https://github.com/matsuri-tech/react-typescript-template/commit/f35ce758cc151cd0091dd13dd82385d0b6a91f3a))
+* **deps:** update dependency jest to v25 ([#158](https://github.com/matsuri-tech/react-typescript-template/issues/158)) ([5e7a689](https://github.com/matsuri-tech/react-typescript-template/commit/5e7a689e90bc349f3cddf029d963ac8ef87b82ff))
+* **deps:** update dependency lint-staged to v10.0.2 ([#156](https://github.com/matsuri-tech/react-typescript-template/issues/156)) ([b25af17](https://github.com/matsuri-tech/react-typescript-template/commit/b25af17b4962d0f68c82e204f9d02fd7824b3ae1))
+* **deps:** update dependency lint-staged to v10.0.3 ([e4c3d45](https://github.com/matsuri-tech/react-typescript-template/commit/e4c3d45e237f54ec1a9750645bc5f6ee864888ce))
+* **deps:** update dependency lint-staged to v10.0.7 ([a9ced7f](https://github.com/matsuri-tech/react-typescript-template/commit/a9ced7f383b5db1acdd32b715dae3fb14c3cb624))
+* **deps:** update dependency standard-version to ^7.1.0 ([#152](https://github.com/matsuri-tech/react-typescript-template/issues/152)) ([8f82328](https://github.com/matsuri-tech/react-typescript-template/commit/8f82328cfc2a379a7167628377c327b937956a1c))
+* **deps:** update dependency styled-components to ^5.0.1 ([964cab3](https://github.com/matsuri-tech/react-typescript-template/commit/964cab3bbc1f706376174248b74ea22d5abec776))
+* **deps:** update dependency ts-jest to v25 ([#159](https://github.com/matsuri-tech/react-typescript-template/issues/159)) ([75e8f0f](https://github.com/matsuri-tech/react-typescript-template/commit/75e8f0f435e46d79f295d2ccc0a4acd4d55d161b))
+* **deps:** update dependency ts-jest to v25.2.0 ([cec04bb](https://github.com/matsuri-tech/react-typescript-template/commit/cec04bb7476987c2c5b54928b6c0de08b38b7336))
+* **deps:** update dependency webpack-dev-server to v3.10.3 ([99eaca7](https://github.com/matsuri-tech/react-typescript-template/commit/99eaca710ece18500368fa0f5bca347cf154111e))
+* add browserlist ([67e2e5c](https://github.com/matsuri-tech/react-typescript-template/commit/67e2e5c495ccef18e6fe0b66390f78aec06de821)), closes [#167](https://github.com/matsuri-tech/react-typescript-template/issues/167)
+* **deps:** update dependency ress to v2.0.4 ([#150](https://github.com/matsuri-tech/react-typescript-template/issues/150)) ([7d89764](https://github.com/matsuri-tech/react-typescript-template/commit/7d897644de3de6708b9dd15d1080d6dedf5da16b))
+* **deps:** update dependency typescript to v3.7.5 ([#148](https://github.com/matsuri-tech/react-typescript-template/issues/148)) ([54e0e89](https://github.com/matsuri-tech/react-typescript-template/commit/54e0e89579df297d7776ab5b36cee24cbffd6998))
+* **deps:** update storybook monorepo to ^5.3.6 ([#149](https://github.com/matsuri-tech/react-typescript-template/issues/149)) ([076030c](https://github.com/matsuri-tech/react-typescript-template/commit/076030c944872f164ab151beca3b37d0f33d89b4))
+* **deps:** update storybook monorepo to ^5.3.8 ([#154](https://github.com/matsuri-tech/react-typescript-template/issues/154)) ([6135705](https://github.com/matsuri-tech/react-typescript-template/commit/613570557ce5b22665decd707c0bfaf9f14b3f19))
+* **deps:** update storybook monorepo to ^5.3.9 ([#162](https://github.com/matsuri-tech/react-typescript-template/issues/162)) ([acde6ba](https://github.com/matsuri-tech/react-typescript-template/commit/acde6ba337c3a50274aec7532cf346595d12e57e))
+* **deps:** upgrade --latest ([ff5bd1c](https://github.com/matsuri-tech/react-typescript-template/commit/ff5bd1c3eb767ee2586ad48c386bcd39530adf6f))
+* **precommit:** disable linting style ([89dabf6](https://github.com/matsuri-tech/react-typescript-template/commit/89dabf65cb28b31d25841132f3adef37fc444f39)), closes [#166](https://github.com/matsuri-tech/react-typescript-template/issues/166)
+* **scripts:** add typecheck script ([96340fd](https://github.com/matsuri-tech/react-typescript-template/commit/96340fd6966b30bab9d19404be533dfd45fce8c4))
+
 ## [1.4.0](https://github.com/matsuri-tech/react-typescript-template/compare/v1.3.0...v1.4.0) (2020-02-10)
 
 
