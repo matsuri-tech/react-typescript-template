@@ -107,7 +107,7 @@ module.exports = (_, { mode = "development" }) => {
             },
             minimizer: [
                 new TerserPlugin({
-                    extractComments: true
+                    extractComments: "all"
                 })
             ]
         },
