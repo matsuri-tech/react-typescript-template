@@ -10,25 +10,29 @@ const pkg = require("./package.json")
 const TerserPlugin = require("terser-webpack-plugin")
 const StatsPlugin = require("stats-webpack-plugin")
 
-module.exports = (_, { mode = "development" }) => {
-    const env = dotenv.config().parsed
-    let envKeys = Object.keys(env).reduce((prev, next) => {
+/**
+ * @param {DotenvParseOutput} env
+ */
+const makeEnvKeys = env => {
+    return Object.keys(env).reduce((prev, next) => {
         prev[`process.env.${next}`] = JSON.stringify(env[next])
         return prev
     }, {})
+}
 
-    if (mode === "production") {
-        const envProd = dotenv.config({
-            path: path.resolve(process.cwd(), ".env.production")
-        }).parsed
-        envKeys = Object.assign(
-            envKeys,
-            Object.keys(envProd).reduce((prev, next) => {
-                prev[`process.env.${next}`] = JSON.stringify(envProd[next])
-                return prev
-            }, {})
+module.exports = (_, { mode = "development" }) => {
+    const env = dotenv.config().parsed
+    let envKeys = makeEnvKeys(env)
+
+    if (mode === "production" || mode === "development") {
+        const additionalEnvKeys = makeEnvKeys(
+            dotenv.config({
+                path: path.resolve(process.cwd(), `.env.${mode}`)
+            }).parsed
         )
+        envKeys = Object.assign(envKeys, additionalEnvKeys)
     }
+
     /**@type {webpack.Configuration} */
     const config = {
         mode,
