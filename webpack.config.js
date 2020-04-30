@@ -13,7 +13,7 @@ const StatsPlugin = require("stats-webpack-plugin")
 /**
  * @param {DotenvParseOutput} env
  */
-const makeEnvKeys = env => {
+const makeEnvKeys = (env) => {
     return Object.keys(env).reduce((prev, next) => {
         prev[`process.env.${next}`] = JSON.stringify(env[next])
         return prev
@@ -27,7 +27,7 @@ module.exports = (_, { mode = "development" }) => {
     if (mode === "production" || mode === "development") {
         const additionalEnvKeys = makeEnvKeys(
             dotenv.config({
-                path: path.resolve(process.cwd(), `.env.${mode}`)
+                path: path.resolve(process.cwd(), `.env.${mode}`),
             }).parsed
         )
         envKeys = Object.assign(envKeys, additionalEnvKeys)
@@ -39,13 +39,13 @@ module.exports = (_, { mode = "development" }) => {
         /** @see https://webpack.js.org/configuration/target */
         target: "web", // (default) web
         entry: {
-            index: "./src/index.tsx"
+            index: "./src/index.tsx",
             // another: "./src/another-module.tsx"
         },
         /** @see https://webpack.js.org/configuration/devtool/#devtool */
         devtool: "",
         resolve: {
-            extensions: [".js", ".jsx", ".ts", ".tsx"]
+            extensions: [".js", ".jsx", ".ts", ".tsx"],
         },
         module: {
             rules: [
@@ -56,13 +56,13 @@ module.exports = (_, { mode = "development" }) => {
                     use: {
                         loader: "babel-loader",
                         options: {
-                            babelrc: true
-                        }
-                    }
+                            babelrc: true,
+                        },
+                    },
                 },
                 {
                     test: /\.md$/,
-                    use: "raw-loader"
+                    use: "raw-loader",
                 },
                 {
                     test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
@@ -76,18 +76,18 @@ module.exports = (_, { mode = "development" }) => {
 
                                 return "[hash].[ext]"
                             },
-                            outputPath: "static/img"
-                        }
-                    }
+                            outputPath: "static/img",
+                        },
+                    },
                 },
                 {
                     test: /\.css$/i,
                     use: [
                         MiniCssExtractPlugin.loader,
-                        { loader: "css-loader", options: { importLoaders: 1 } }
-                    ]
-                }
-            ]
+                        { loader: "css-loader", options: { importLoaders: 1 } },
+                    ],
+                },
+            ],
         },
         output: {
             path: path.resolve(__dirname, "dist"),
@@ -95,7 +95,7 @@ module.exports = (_, { mode = "development" }) => {
             chunkFilename: "static/js/[name].[chunkhash:8].chunk.js",
             libraryTarget: "umd",
             //publicPath: "/dist/",
-            umdNamedDefine: true
+            umdNamedDefine: true,
         },
         /** @see https://webpack.js.org/configuration/optimization */
         optimization: {
@@ -104,40 +104,40 @@ module.exports = (_, { mode = "development" }) => {
             minimize: true,
             nodeEnv: "production",
             splitChunks: {
-                chunks: "all"
+                chunks: "all",
             },
             runtimeChunk: {
-                name: "runtime"
+                name: "runtime",
             },
             minimizer: [
                 new TerserPlugin({
-                    extractComments: "all"
-                })
-            ]
+                    extractComments: "all",
+                }),
+            ],
         },
         plugins: [
             new webpack.DefinePlugin({
                 "process.env.NODE_ENV":
                     `"${process.env.NODE_ENV}"` || '"production"',
-                ...envKeys
+                ...envKeys,
             }),
             /** @see https://github.com/webpack/webpack/tree/master/examples/aggressive-merging */
             new AggressiveMergingPlugin(),
             new MiniCssExtractPlugin({
                 filename: "static/css/[name].[chunkhash:8].css",
-                chunkFilename: "static/css/[id].[chunkhash:8].css"
+                chunkFilename: "static/css/[id].[chunkhash:8].css",
             }),
             new CleanWebpackPlugin(),
             new CopyWebpackPlugin([
-                { from: path.resolve(__dirname, "public"), to: "./" }
+                { from: path.resolve(__dirname, "public"), to: "./" },
             ]),
             new HtmlWebpackPlugin({
                 title: pkg.title,
                 homepage: pkg.homepage,
                 description: pkg.description,
-                template: path.resolve(__dirname, "public/index.html")
-            })
-        ]
+                template: path.resolve(__dirname, "public/index.html"),
+            }),
+        ],
     }
 
     /**
@@ -147,35 +147,35 @@ module.exports = (_, { mode = "development" }) => {
         config.devtool = "source-map"
         config.output = {
             path: path.resolve(__dirname, "dist"),
-            filename: "[name].js"
+            filename: "[name].js",
         }
         config.module.rules.push({
             loader: "source-map-loader",
             test: /\.js$/,
             exclude: /node_modules/,
-            enforce: "pre"
+            enforce: "pre",
         })
         config.plugins = [
             new MiniCssExtractPlugin({
                 filename: "static/styles/[name].[chunkhash:8].css",
-                chunkFilename: "static/styles/[id].[chunkhash:8].css"
+                chunkFilename: "static/styles/[id].[chunkhash:8].css",
             }),
             new HtmlWebpackPlugin({
                 title: pkg.title,
                 description: pkg.description,
                 homepage: pkg.homepage,
-                template: path.resolve(__dirname, "public/index.html")
+                template: path.resolve(__dirname, "public/index.html"),
             }),
             new webpack.DefinePlugin({
                 "process.env.NODE_ENV":
                     `"${process.env.NODE_ENV}"` || '"development"',
-                ...envKeys
+                ...envKeys,
             }),
             new webpack.HotModuleReplacementPlugin(),
             new StatsPlugin("stats.json", {
                 chunkModules: true,
-                exclude: [/node_modules[\\/]react/]
-            })
+                exclude: [/node_modules[\\/]react/],
+            }),
         ]
         config.devServer = {
             historyApiFallback: true,
@@ -197,8 +197,8 @@ module.exports = (_, { mode = "development" }) => {
                 errors: true,
                 errorDetails: true,
                 warnings: false,
-                publicPath: false
-            }
+                publicPath: false,
+            },
             // allowedHosts: []
         }
         config.optimization = {
@@ -212,10 +212,10 @@ module.exports = (_, { mode = "development" }) => {
                         test: /node_modules/,
                         name: "vendor",
                         enforce: true,
-                        chunks: "all"
-                    }
-                }
-            }
+                        chunks: "all",
+                    },
+                },
+            },
         }
     }
     return config

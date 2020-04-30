@@ -3,6 +3,6 @@ module.exports = {
     rules: {
         //@see https://commitlint.js.org/#/reference-rules
         "subject-case": [0],
-        "scope-case": [0]
-    }
+        "scope-case": [0],
+    },
 }

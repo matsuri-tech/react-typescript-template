@@ -35,8 +35,8 @@ export const AddTodo: React.FC = () => {
                 type: "ADD_TODO",
                 payload: {
                     text: ref.current.value,
-                    id: nextTodoId++
-                }
+                    id: nextTodoId++,
+                },
             })
             ref.current.value = ""
         },

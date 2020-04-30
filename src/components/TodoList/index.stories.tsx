@@ -4,8 +4,8 @@ import React from "react"
 export default {
     title: "TodoList",
     parameters: {
-        component: TodoList
-    }
+        component: TodoList,
+    },
 }
 
 export const BasicUsage = () => {
@@ -16,13 +16,13 @@ export const BasicUsage = () => {
                 {
                     id: 1,
                     completed: false,
-                    text: "Hoge"
+                    text: "Hoge",
                 },
                 {
                     id: 2,
                     completed: true,
-                    text: "HogeHoge"
-                }
+                    text: "HogeHoge",
+                },
             ]}
         />
     )

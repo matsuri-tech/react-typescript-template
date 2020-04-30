@@ -1,7 +1,7 @@
-{   
-    "watchOptions":{
-        "watchFile":"useFsEvents",
-        "watchDirectory":"useFsEvents",
+{
+    "watchOptions": {
+        "watchFile": "useFsEvents",
+        "watchDirectory": "useFsEvents",
         "fallbackPolling": "dynamicPriority"
     },
     "compilerOptions": {
