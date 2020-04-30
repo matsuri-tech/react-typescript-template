@@ -32,7 +32,7 @@ export const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo }) => {
     )
     return (
         <Root>
-            {todos.map(todo => (
+            {todos.map((todo) => (
                 <Todo
                     key={todo.id}
                     completed={todo.completed}

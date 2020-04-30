@@ -11,7 +11,7 @@ export interface FilterLinkProps {
 
 export const FilterLink: React.FC<FilterLinkProps> = ({ children, filter }) => {
     const active = useSelector<boolean>(
-        useCallback(state => filter === state.visibilityFilter, [filter])
+        useCallback((state) => filter === state.visibilityFilter, [filter])
     )
     const dispatch = useDispatch()
 
@@ -19,8 +19,8 @@ export const FilterLink: React.FC<FilterLinkProps> = ({ children, filter }) => {
         dispatch({
             type: "SET_VISIBILITY_FILTER",
             payload: {
-                filter
-            }
+                filter,
+            },
         })
     }, [dispatch, filter])
 

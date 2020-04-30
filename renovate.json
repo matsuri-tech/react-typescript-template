@@ -1,23 +1,14 @@
 {
-    "extends": [
-        "config:base"
-    ],
+    "extends": ["config:base"],
     "timezone": "Asia/Tokyo",
-    "schedule": [
-        "every weekend"
-    ],
-    "labels": [
-        "renovate",
-        "rebase"
-    ],
+    "schedule": ["every weekend"],
+    "labels": ["renovate", "rebase"],
     "patch": {
         "automerge": true
     },
     "lockFileMaintenance": {
         "enabled": true,
-        "schedule": [
-            "before 3am on the first day of the month"
-        ]
+        "schedule": ["before 3am on the first day of the month"]
     },
     "npm": {
         "rangeStrategy": "bump",
@@ -33,22 +24,15 @@
             },
             {
                 "groupName": "ESLint and Prettier",
-                "packagePatterns": [
-                    "^eslint",
-                    "^prettier"
-                ]
+                "packagePatterns": ["^eslint", "^prettier"]
             },
             {
                 "groupName": "Webpack",
-                "packagePatterns": [
-                    "^webpack"
-                ]
+                "packagePatterns": ["^webpack"]
             },
             {
                 "groupName": "Types",
-                "packagePatterns": [
-                    "^@types/"
-                ]
+                "packagePatterns": ["^@types/"]
             },
             {
                 "groupName": "Storybook",
@@ -59,11 +43,7 @@
             },
             {
                 "groupName": "Sub Lint Tools",
-                "packagePatterns": [
-                    "^textlint",
-                    "^stylelint",
-                    "^@commitlint"
-                ]
+                "packagePatterns": ["^textlint", "^stylelint", "^@commitlint"]
             },
             {
                 "groupName": "Main Packages",

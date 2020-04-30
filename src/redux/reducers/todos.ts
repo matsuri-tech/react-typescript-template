@@ -19,11 +19,11 @@ export const todos: Reducer<State, Action> = (state = [], action) => {
                 {
                     id: action.payload.id,
                     text: action.payload.text,
-                    completed: false
-                }
+                    completed: false,
+                },
             ]
         case "TOGGLE_TODO":
-            return state.map(todo =>
+            return state.map((todo) =>
                 todo.id === action.payload.id
                     ? { ...todo, completed: !todo.completed }
                     : todo
