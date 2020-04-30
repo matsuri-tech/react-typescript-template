@@ -3,7 +3,7 @@
     "title": "Edit package.json",
     "description": "Edit package.json",
     "homepage": "https://edit-package.json",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "@matsuri-tech/react-typescript-template": {
         "version": "2.0.0"
     },
