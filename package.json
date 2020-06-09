@@ -101,9 +101,9 @@
         "ts-jest": "25.5.1",
         "typescript": "3.8.3",
         "webpack": "4.43.0",
-        "webpack-bundle-analyzer": "^3.7.0",
+        "webpack-bundle-analyzer": "^3.8.0",
         "webpack-cli": "3.3.11",
-        "webpack-dev-server": "3.10.3",
+        "webpack-dev-server": "3.11.0",
         "webpack-hot-middleware": "2.25.0"
     },
     "scripts": {
