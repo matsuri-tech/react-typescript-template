@@ -1,3 +1,7 @@
-type Page<Props = {}> = React.FC<Props> & {
+type Page<
+    Props = {
+        [key: string]: any
+    }
+> = React.FC<Props> & {
     path: string
 }

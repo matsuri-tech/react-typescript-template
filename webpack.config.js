@@ -128,9 +128,11 @@ module.exports = (_, { mode = "development" }) => {
                 chunkFilename: "static/css/[id].[chunkhash:8].css",
             }),
             new CleanWebpackPlugin(),
-            new CopyWebpackPlugin([
-                { from: path.resolve(__dirname, "public"), to: "./" },
-            ]),
+            new CopyWebpackPlugin({
+                patterns: [
+                    { from: path.resolve(__dirname, "public"), to: "./" },
+                ],
+            }),
             new HtmlWebpackPlugin({
                 title: pkg.title,
                 homepage: pkg.homepage,

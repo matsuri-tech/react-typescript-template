@@ -4,67 +4,67 @@ module.exports = {
         ecmaVersion: 9,
         project: "./tsconfig.json",
         sourceType: "module",
-        createDefaultProgram: true
+        createDefaultProgram: true,
     },
     env: {
         es6: true,
         browser: true,
-        node: true
+        node: true,
     },
     extends: [
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:prettier/recommended",
-        "prettier/@typescript-eslint"
+        "prettier/@typescript-eslint",
     ],
-    plugins: ["@typescript-eslint", "react-hooks","sort-imports-es6-autofix"],
+    plugins: ["@typescript-eslint", "react-hooks", "sort-imports-es6-autofix"],
     rules: {
         // 通常のsort-importsではautofixが効かないパターンが多いため
-        "sort-imports-es6-autofix/sort-imports-es6": [2, {
-            "ignoreCase": false,
-            "ignoreMemberSort": false,
-            "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
-        }],
+        "sort-imports-es6-autofix/sort-imports-es6": [
+            2,
+            {
+                ignoreCase: false,
+                ignoreMemberSort: false,
+                memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
+            },
+        ],
         "@typescript-eslint/ban-types": [
             "error",
             {
-              "types": {
-                "FC":{
-                  "message": "Use React.FC instead",
-                  "fixWith": "React.FC"
+                types: {
+                    FC: {
+                        message: "Use React.FC instead",
+                        fixWith: "React.FC",
+                    },
+                    "React.FunctionComponent": {
+                        message: "Use React.FC instead",
+                        fixWith: "React.FC",
+                    },
+                    Array: null,
+                    Object: "Use {} instead",
+                    String: {
+                        message: "Use string instead",
+                        fixWith: "string",
+                    },
                 },
-                "React.FunctionComponent": {
-                  "message": "Use React.FC instead",
-                  "fixWith": "React.FC"
-                },
-                "Array": null,
-                "Object": "Use {} instead",
-                "String": {
-                  "message": "Use string instead",
-                  "fixWith": "string"
-                }
-             }
-            }
-          ]
+            },
+        ],
     },
     settings: {
         react: {
-            version: "detect"
+            version: "detect",
         },
         node: {
-            tryExtensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".node"]
-        }
+            tryExtensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".node"],
+        },
     },
     overrides: [
         {
             files: ["**/*.ts", "**/*.tsx"],
             rules: {
                 "react/self-closing-comp": 2,
-                
-                "prefer-object-spread": "error",
 
-                "@typescript-eslint/interface-name-prefix": [2, "never"],
-                "no-console": 0,
+                "prefer-object-spread": "error",
 
                 "no-case-declarations": 2,
                 "react/no-unescaped-entities": 2,
@@ -79,7 +79,10 @@ module.exports = {
                 "@typescript-eslint/no-array-constructor": 2,
 
                 "@typescript-eslint/adjacent-overload-signatures": 2,
-                "@typescript-eslint/no-namespace": [2, { allowDeclarations: true }],
+                "@typescript-eslint/no-namespace": [
+                    2,
+                    { allowDeclarations: true },
+                ],
                 "@typescript-eslint/prefer-namespace-keyword": 2,
 
                 "@typescript-eslint/no-require-imports": 2,
@@ -87,30 +90,30 @@ module.exports = {
                 "@typescript-eslint/consistent-type-assertions": 2,
                 "@typescript-eslint/no-unnecessary-type-assertion": 2,
                 "@typescript-eslint/restrict-plus-operands": 2,
-                '@typescript-eslint/return-await': 'error',
+                "@typescript-eslint/return-await": "error",
 
                 // react-hooks
                 "react-hooks/rules-of-hooks": "error",
                 /**
-                * @see https://overreacted.io/a-complete-guide-to-useeffect/
-                * @see https://github.com/facebook/react/issues/14920#issuecomment-472018817
-                */
+                 * @see https://overreacted.io/a-complete-guide-to-useeffect/
+                 * @see https://github.com/facebook/react/issues/14920#issuecomment-472018817
+                 */
                 "react-hooks/exhaustive-deps": "warn",
 
                 // react typescript
                 "@typescript-eslint/explicit-function-return-type": "off",
                 "react/prop-types": "off",
-                "no-console":  ["error", { allow: ["error", "warn", "info"] }]
-            }
+                "no-console": ["error", { allow: ["error", "warn", "info"] }],
+            },
         },
         {
             files: ["**/__tests__/**", "**/*.test.tsx", "**/*.test.ts"],
             env: {
-                jest: true
+                jest: true,
             },
             rules: {
-                "no-invalid-this": 0
-            }
-        }
-    ]
+                "no-invalid-this": 0,
+            },
+        },
+    ],
 }

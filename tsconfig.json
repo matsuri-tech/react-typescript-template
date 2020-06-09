@@ -22,7 +22,6 @@
         "noImplicitThis": true,
         "outDir": "dist",
         "resolveJsonModule": true,
-        "rootDirs": ["src"],
         "skipLibCheck": true,
         "sourceMap": true,
         "strict": true,
