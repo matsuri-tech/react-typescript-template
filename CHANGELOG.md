@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/matsuri-tech/react-typescript-template/compare/v2.1.1...v2.2.0) (2020-06-21)
+
+
+### Features
+
+* remove redux ([8f24025](https://github.com/matsuri-tech/react-typescript-template/commit/8f24025179286e05951b15f9bbbbe140a2df7053))
+* remove styled-components ([cec84d4](https://github.com/matsuri-tech/react-typescript-template/commit/cec84d454d096253cf9edf2de5eb45703f146b60))
+* update testing tool & add example ([6c36a3e](https://github.com/matsuri-tech/react-typescript-template/commit/6c36a3e12560fb2de7e7180c5dfe4cdcc934944d))
+
+
+### Documents
+
+* update ([3c6da45](https://github.com/matsuri-tech/react-typescript-template/commit/3c6da45609ae9ef009334cd29cd3f78deae82d30))
+
+
+### Others
+
+* **renovate:** remove useless rules ([9a7cd0f](https://github.com/matsuri-tech/react-typescript-template/commit/9a7cd0fd94ecbca69b805ef5daf4cc17908c15f5))
+
 ### [2.1.1](https://github.com/matsuri-tech/react-typescript-template/compare/v2.1.0...v2.1.1) (2020-06-09)
 
 
