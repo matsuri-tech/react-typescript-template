@@ -46,16 +46,6 @@
                 "packagePatterns": ["^textlint", "^stylelint", "^@commitlint"]
             },
             {
-                "groupName": "Main Packages",
-                "packagePatterns": [
-                    "^lodash",
-                    "^dayjs",
-                    "^react-icons",
-                    "^react-router",
-                    "^react-router-dom"
-                ]
-            },
-            {
                 "description": "DevDeps",
                 "packageNames": [
                     "husky",
