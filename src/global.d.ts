@@ -25,29 +25,3 @@ declare namespace NodeJS {
          */
     }
 }
-
-/**
- * Redux
- */
-interface Action<T = any> {
-    type: T
-}
-
-interface AnyAction extends Action {
-    [extraProps: string]: any
-}
-
-type ActionsType<ActionCreators extends object> = {
-    [Key in keyof ActionCreators]: ActionCreators[Key] extends (
-        ...args: any[]
-    ) => AnyAction
-        ? ReturnType<ActionCreators[Key]>
-        : never
-}
-
-type ActionType<
-    ActionCreators extends object,
-    Actions = ActionsType<ActionCreators>
-> = { [Key in keyof Actions]: Actions[Key] }[keyof Actions]
-
-type StateType<Reducer> = Exclude<Parameters<Reducer>[0], undefined>
