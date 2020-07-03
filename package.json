@@ -85,7 +85,7 @@
         "react-test-renderer": "^16.13.1",
         "ress": "2.0.4",
         "rimraf": "3.0.2",
-        "source-map-loader": "1.0.0",
+        "source-map-loader": "1.0.1",
         "standard-version": "^8.0.0",
         "stats-webpack-plugin": "^0.7.0",
         "stylelint": "^13.6.1",
