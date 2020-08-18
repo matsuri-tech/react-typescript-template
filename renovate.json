@@ -1,65 +1,14 @@
 {
     "extends": ["config:base"],
-    "timezone": "Asia/Tokyo",
-    "schedule": ["every weekend"],
-    "labels": ["renovate", "rebase"],
     "patch": {
-        "automerge": true
+      "automerge": true
     },
     "lockFileMaintenance": {
-        "enabled": true,
-        "schedule": ["before 3am on the first day of the month"]
+      "enabled": true,
+      "schedule": ["before 3am on the first day of the month"]
     },
-    "npm": {
-        "rangeStrategy": "bump",
-        "packageRules": [
-            {
-                "groupName": "React",
-                "packageNames": [
-                    "@types/react",
-                    "@types/react-dom",
-                    "react",
-                    "react-dom"
-                ]
-            },
-            {
-                "groupName": "ESLint and Prettier",
-                "packagePatterns": ["^eslint", "^prettier"]
-            },
-            {
-                "groupName": "Webpack",
-                "packagePatterns": ["^webpack"]
-            },
-            {
-                "groupName": "Types",
-                "packagePatterns": ["^@types/"]
-            },
-            {
-                "groupName": "Storybook",
-                "packagePatterns": [
-                    "^@storybook/",
-                    "react-docgen-typescript-loader"
-                ]
-            },
-            {
-                "groupName": "Sub Lint Tools",
-                "packagePatterns": ["^textlint", "^stylelint", "^@commitlint"]
-            },
-            {
-                "description": "DevDeps",
-                "packageNames": [
-                    "husky",
-                    "rimraf",
-                    "jest",
-                    "npm-run-all",
-                    "int-staged",
-                    "ts-jest",
-                    "ts-loader",
-                    "lint-staged",
-                    "core-js",
-                    "@testing-library/"
-                ]
-            }
-        ]
+    "minor": {
+      "groupName": "all dependencies",
+      "schedule": ["before 3am on the first day of the month"]
     }
-}
+  }
