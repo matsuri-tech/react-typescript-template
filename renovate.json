@@ -1,14 +1,14 @@
 {
     "extends": ["config:base"],
     "patch": {
-      "automerge": true
+        "automerge": true
     },
     "lockFileMaintenance": {
-      "enabled": true,
-      "schedule": ["before 3am on the first day of the month"]
+        "enabled": true,
+        "schedule": ["before 3am on the first day of the month"]
     },
     "minor": {
-      "groupName": "all dependencies",
-      "schedule": ["before 3am on the first day of the month"]
+        "groupName": "all dependencies",
+        "schedule": ["before 3am on the first day of the month"]
     }
-  }
+}
