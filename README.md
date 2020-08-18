@@ -1,38 +1,35 @@
-- [React Typescript Template](#react-typescript-template)
-  - [React](#react)
-  - [Dotenv, process.env](#dotenv-processenv)
-    - [ProcessEnvの型](#processenvの型)
-  - [HTML](#html)
-    - [OGPテンプレート](#ogpテンプレート)
-    - [Faviconテンプレート](#faviconテンプレート)
-    - [Googleフォントの最適化](#googleフォントの最適化)
-  - [Markdown](#markdown)
-  - [Image](#image)
-  - [構文の新規サポート](#構文の新規サポート)
-  - [Netlify](#netlify)
-    - [Netlifyの設定](#netlifyの設定)
-    - [production buildとdevelopment buildのコマンドを分けたい場合](#production-buildとdevelopment-buildのコマンドを分けたい場合)
-  - [commitlint, angular commit guideline](#commitlint-angular-commit-guideline)
-  - [React HooksやReduxの使用について](#react-hooksやreduxの使用について)
-    - [Hooksの切り出し例](#hooksの切り出し例)
-
 # React Typescript Template
 
-各エコシスムのチュートリアルドキュメント
+<!-- TOC -->
 
-- [npm](https://docs.npmjs.com/files/package.json) - package.jsonが分からない場合はこれを見てください。
-- [Yarn](https://yarnpkg.com/ja/docs/getting-started)
-- [React](https://reactjs.org/docs/getting-started.html)
-- [Typescript](http://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
-- [styled-components](https://styled-components.com/docs/basics#getting-started)
-- [Webpack](https://webpack.js.org/guides/getting-started/)
-- [dotenv](https://github.com/motdotla/dotenv)
-- [ESLint](https://eslint.org/docs/user-guide/getting-started)
-- [VSCode](https://code.visualstudio.com/docs/getstarted/introvideos) - VSCodeで記述されることを前提にしています。
-- [Netlify](https://docs.netlify.com/site-deploys/overview/#deploy-contexts)
-  - [Netlify.toml](https://docs.netlify.com/configure-builds/file-based-configuration/#sample-file)
+- [React Typescript Template](#react-typescript-template)
+    - [Branch protection rule](#branch-protection-rule)
+    - [Dotenv, process.env](#dotenv-processenv)
+        - [ProcessEnvの型](#processenv%E3%81%AE%E5%9E%8B)
+    - [HTML](#html)
+        - [OGPテンプレート](#ogp%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88)
+        - [Faviconテンプレート](#favicon%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88)
+        - [Googleフォントの最適化](#google%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88%E3%81%AE%E6%9C%80%E9%81%A9%E5%8C%96)
+    - [Markdown](#markdown)
+    - [Image](#image)
+    - [構文の新規サポート](#%E6%A7%8B%E6%96%87%E3%81%AE%E6%96%B0%E8%A6%8F%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88)
+    - [Netlify](#netlify)
+        - [Netlifyの設定](#netlify%E3%81%AE%E8%A8%AD%E5%AE%9A)
+        - [production buildとdevelopment buildのコマンドを分けたい場合](#production-build%E3%81%A8development-build%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%88%86%E3%81%91%E3%81%9F%E3%81%84%E5%A0%B4%E5%90%88)
+    - [commitlint, angular commit guideline](#commitlint-angular-commit-guideline)
+    - [React HooksやReduxの使用について](#react-hooks%E3%82%84redux%E3%81%AE%E4%BD%BF%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+        - [Hooksの切り出し例](#hooks%E3%81%AE%E5%88%87%E3%82%8A%E5%87%BA%E3%81%97%E4%BE%8B)
 
-## React
+<!-- /TOC -->
+
+## Branch protection rule
+
+1. 有効化したいリポジトリで"settings" → "branches" → "Add rule"
+2. "Branch name pattern"にmasterと記入。
+3. "Require pull request reviews before merging"をチェック。
+4. "Dismiss stale pull request approvals when new commits are pushed"をチェック。
+5. Github Actions/Circle CI/Vercel/Netlifyなどを使用していれば、"Require status checks to pass before merging"にもチェックし、必ず成功している必要があるものを選択。
+6. Renovateを利用する場合は、"Restrict who can push to matching branches"にチェックを入れ、"People, teams or apps with push access"に"renovate"を追加。
 
 ## Dotenv, process.env
 
