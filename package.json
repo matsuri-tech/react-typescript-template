@@ -3,9 +3,9 @@
     "title": "Edit package.json",
     "description": "Edit package.json",
     "homepage": "https://edit-package.json",
-    "version": "2.2.0",
+    "version": "3.0.0",
     "@matsuri-tech/react-typescript-template": {
-        "version": "2.1.1"
+        "version": "3.0.0"
     },
     "repository": "git@github.com:matsuri-tech/react-typescript-template.git",
     "license": "GPL-3.0",
@@ -115,12 +115,12 @@
         "lint:json": "prettier \"*.json\"",
         "lint:ci": "circleci config validate",
         "lint:style": "stylelint \"./src/**/*.tsx\" --syntax css-in-js",
-        "lint:fix:ts": "yarn lint:ts --fix",
-        "lint:fix:js": "yarn lint:js --fix",
-        "lint:fix:json": "yarn lint:json --write",
-        "lint:fix:style": "yarn lint:style --fix",
+        "format:ts": "yarn lint:ts --fix",
+        "format:js": "yarn lint:js --fix",
+        "format:json": "yarn lint:json --write",
+        "format:style": "yarn lint:style --fix",
         "lint": "run-p -l -n -c --aggregate-output lint:*",
-        "lint:fix": "run-p -l -n -c --aggregate-output lint:fix:*",
+        "format": "run-p -l -n -c --aggregate-output format:*",
         "release": "standard-version",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
@@ -152,16 +152,16 @@
             "git add"
         ],
         "*.{js,jsx}": [
-            "yarn lint:fix:js",
+            "yarn format:js",
             "git add"
         ],
         "*.{ts,tsx}": [
             "yarn typecheck",
-            "yarn lint:fix:ts",
+            "yarn format:ts",
             "git add"
         ],
         "*.{json}": [
-            "yarn lint:fix:json",
+            "yarn format:json",
             "git add"
         ]
     }
