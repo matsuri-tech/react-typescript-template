@@ -88,7 +88,7 @@
         "source-map-loader": "1.1.0",
         "standard-version": "9.0.0",
         "stats-webpack-plugin": "0.7.0",
-        "stylelint": "13.7.1",
+        "stylelint": "13.7.2",
         "stylelint-config-recess-order": "2.1.0",
         "stylelint-config-recommended": "3.0.0",
         "ts-jest": "26.3.0",
