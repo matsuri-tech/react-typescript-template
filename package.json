@@ -3,21 +3,11 @@
     "title": "Edit package.json",
     "description": "Edit package.json",
     "homepage": "https://edit-package.json",
-    "version": "3.0.0",
+    "version": "0.0.0",
     "@matsuri-tech/react-typescript-template": {
         "version": "3.0.0"
     },
-    "repository": "git@github.com:matsuri-tech/react-typescript-template.git",
-    "license": "GPL-3.0",
-    "main": "dist/index.cjs.js",
-    "jsnext:main": "dist/index.esm.js",
-    "module": "dist/index.esm.js",
-    "types": "dist/index.d.ts",
     "author": "hrdtbs",
-    "files": [
-        "dist",
-        "package.json"
-    ],
     "eslintIgnore": [
         "dist",
         "node_modules"
@@ -113,7 +103,6 @@
         "lint:ts": "eslint \"*/**/*.{ts,tsx}\"",
         "lint:js": "eslint ./*.js",
         "lint:json": "prettier \"*.json\"",
-        "lint:ci": "circleci config validate",
         "lint:style": "stylelint \"./src/**/*.tsx\" --syntax css-in-js",
         "format:ts": "yarn lint:ts --fix",
         "format:js": "yarn lint:js --fix",
@@ -147,16 +136,11 @@
         ]
     },
     "lint-staged": {
-        "./.circleci/config.yml": [
-            "yarn lint:ci",
-            "git add"
-        ],
         "*.{js,jsx}": [
             "yarn format:js",
             "git add"
         ],
         "*.{ts,tsx}": [
-            "yarn typecheck",
             "yarn format:ts",
             "git add"
         ],
